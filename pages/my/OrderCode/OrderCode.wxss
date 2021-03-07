@@ -1,0 +1,257 @@
+.fui-list-group.notop {
+  margin-top: 0;
+}
+
+.fui-list-group.notop .fui-list {
+  padding: 32rpx 24rpx;
+}
+
+.fui-list-media {
+  margin-right: 24rpx;
+}
+
+.fui-list-group.notop .fui-list image {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.fui-list-inner .title {
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.fui-list-inner .subtitle {
+  font-size: 26rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+
+.fui-list-angle {
+  margin: 0 0 0 54rpx;
+  font-size: 26rpx;
+  height: 90rpx;
+  line-height: 2;
+}
+
+.code_box {
+  text-align: center;
+  background: #fff;
+  height: 530rpx;
+}
+
+.code_box .p {
+  font-size: 28rpx;
+  color: #000;
+  padding-top: 45rpx;
+  padding-bottom: 20rpx;
+}
+
+.img_box {
+  margin-top: 5rpx;
+}
+
+.img_box image {
+  width: 260rpx;
+  height: 260rpx;
+}
+
+.cav_code {
+  width: 276rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  color: #666;
+  border-radius: 8rpx;
+  background: #f7f7f7;
+  margin: 32rpx auto 0;
+}
+
+.fui-cell.noborder {
+  padding: 30rpx 24rpx 0;
+}
+
+.fui-cell.noborder:last-child {
+  padding-bottom: 30rpx;
+}
+
+.fui-cell-title {
+  font-size: 28rpx;
+  color: #999;
+  position: relative;
+}
+
+.fui-cell-title:after {
+  content: "";
+  position: absolute;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: 0;
+  height: 0;
+  border-bottom: 2rpx solid #D9D9D9;
+  color: #D9D9D9;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+
+.record {
+  position: relative;
+}
+
+.record:after {
+  content: "";
+  position: absolute;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: 0;
+  height: 0;
+  border-bottom: 2rpx solid #D9D9D9;
+  color: #D9D9D9;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+
+.record:last-child::after {
+  display: none;
+}
+
+.fui-cell-group .record .fui-cell .fui-cell-info,.fui-cell-group .record .fui-cell .fui-cell-label {
+  color: #666;
+}
+
+.fui-cell-group .record .fui-cell .fui-cell-remark.noremark {
+  color: #b2b2b2;
+}.fui-list-group {
+  background-color: #fff;
+  position: relative;
+  margin-top: 20rpx;
+}
+.fui-list-media {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  align-items: center;
+  margin-right: 20rpx;
+  color: #000;
+  position: relative;
+}
+.fui-list-inner {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: block;
+}
+.fui-list-inner .title {
+  position: relative;
+  font-size: 26rpx;
+  color: #000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.fui-list-inner .subtitle {
+  position: relative;
+  font-size: 26rpx;
+  color: #444;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.fui-list-group {
+  background-color: #fff;
+  position: relative;
+  margin-top: 20rpx;
+}
+.fui-list {
+  position: relative;
+  display: flex;
+  padding: 16rpx 24rpx;
+  transition-duration: 300ms;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fui-cell-group {
+  margin-top: 20rpx;
+  background-color: #fff;
+  line-height: 1.4;
+  font-size: 32rpx;
+  overflow: hidden;
+  position: relative;
+}
+.fui-cell-title {
+  color: #333;
+  font-size: 30rpx;
+  padding: 20rpx 28rpx;
+}
+.fui-cell-group .fui-cell .fui-cell-info {
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.fui-cell-group {
+  margin-top: 20rpx;
+  background-color: #fff;
+  line-height: 1.4;
+  font-size: 32rpx;
+  overflow: hidden;
+  position: relative;
+}
+.fui-cell-title {
+  color: #333;
+  font-size: 30rpx;
+  padding: 20rpx 28rpx;
+}
+.fui-cell-group .fui-cell {
+  position: relative;
+  padding: 24rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  transition-duration: 300ms;
+  transition-property: background-color;
+}
+/* 二维码 */
+.input-wrapper {
+  margin: 40rpx auto 0 auto;
+  width: 600rpx;
+  height: 88rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 16rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.input-wrapper input {
+  font-size: 32rpx;
+  line-height: 88rpx;
+  height: 100%;
+}
+
+.button-wrapper {
+  margin-top: 40rpx;
+}
+
+.canvas {
+  margin: 5rpx auto;
+  width: 150px;
+  height: 150px;
+  /* border: 1px solid black; */
+}
+
+.tip {
+  text-align: center;
+  padding: 20rpx;
+}
+/* 二维码结束 */

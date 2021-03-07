@@ -1,0 +1,214 @@
+/* pages/shop/index.wxss *//* pages/index/index.wxss */
+/**轮播图 start**/
+.swiper {
+  height: 300rpx;
+  width: 100%;
+ }
+ .swiper image {
+  height: 100%;
+  width: 100%;
+ }
+ .index_swiper swiper{
+   width:750rpx;
+   height:340rpx;
+ }
+ .index_swiper swiper image{
+   width:100%;
+ }
+ .index_swiper swiper navigator{
+   width: 100%;
+   height: 100%;
+ }
+ .index_swiper swiper navigator image{
+  width: 100%;
+  height: 100% !important;
+}
+  /**轮播图 end**/
+
+  /**导航 start**/
+.inde_cate{
+  display: flex;/*最外层伸缩盒子*/
+  background-color: #fff;
+}
+.inde_cate navigator{
+  flex: 1;/*宽度占1份*/
+  padding: 20rpx;/*内边距20rpx*/
+}
+.inde_cate navigator image{
+  width: 100%;/*父元素多宽，我也是多宽*/
+}
+
+
+.banner{
+  width:100%;
+  height: 80rpx;
+  /* background: #000; */
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.banner image{
+  width: 720rpx;
+  background-color: #fff;
+  height: 80rpx;
+  border-radius:15rpx;
+}
+
+.goods{
+  width: 100%;/*设置最外层的宽度为100%*/
+  background-color: #F3F3F3;
+  display: flex;/*使用弹性布局*/
+  /* 默认横向，省略没写 */
+  flex-wrap: wrap;/*对超出屏幕范围的子元素进行换行*/
+  justify-content: space-between;
+  padding: 0rpx 15rpx;
+}
+.goods_item{
+  width: 350rpx;
+  height: 450rpx;
+  background: #fff; 
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  border-radius:15rpx; 
+}
+
+.goods_item_img{
+  width: 100%;
+  /* border-radius:25rpx; */
+}
+.goods_item_img_toutu{
+  width: 350rpx;
+  height: 300rpx;
+  border-radius:15rpx 15rpx 0 0;
+}
+.goods_item_content{
+  display: flex;
+  padding: 10rpx;
+  justify-content:space-between;
+}
+.goods_item_name{
+  padding: 10rpx;
+  font-size:32rpx;
+  flex:2;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.goods_item_content text{
+  color: red;
+}
+.goods_item_content navigator{
+  border:1rpx red solid;
+  color: red;
+  font-size: 22rpx;
+  padding: 8rpx;
+}
+
+
+.bottom_tool{
+  position: fixed;
+  left: 0;
+  bottom: 0 ;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+}
+.bottom_tool .tool_item{
+  flex: 1;
+  display: flex;/*伸缩盒子，让她在一行显示*/
+  flex-direction: column;/*改变主轴的方向，由横向变竖向*/
+  justify-content: center;/*让元素进行垂直居中*/
+  align-items: center;/*让元素进行水平居中*/
+  position: relative;/*相对定位*/
+}
+.bottom_tool .tool_item button{
+  position:absolute;
+  top: 0;/*紧贴上边*/
+  left: 0;/*紧贴左边*/
+  width: 100%;/*跟父元素一样宽*/
+  height: 100%;/*跟父元素一样高*/
+  opacity: 0;/*透明度为0*/
+}
+.bottom_tool .btn_buy{
+  flex:2;
+  display: flex;/*伸缩盒子，让她在一行显示*/
+  flex-direction: column;/*改变主轴的方向，由横向变竖向*/
+  justify-content: center;/*让元素进行垂直居中*/
+  align-items: center;/*让元素进行水平居中*/
+  color: #fff;
+  background-color: red;
+  font-size: 30rpx;
+  font-weight: 600;/*字体加粗*/
+}
+.bottom_tool .btn_phone{
+  flex:2;
+  display: flex;/*伸缩盒子，让她在一行显示*/
+  flex-direction: column;/*改变主轴的方向，由横向变竖向*/
+  justify-content: center;/*让元素进行垂直居中*/
+  align-items: center;/*让元素进行水平居中*/
+  color: #fff;
+  background-color: #07C160;
+  font-size: 30rpx;
+  font-weight: 600;/*字体加粗*/
+}
+
+
+.shop_xiangmu{
+  display: flex;
+  justify-content: space-around;
+  flex-direction:column;
+  background-color: #fff;
+
+}
+.xiangmu_title{
+  background-color: #FFC800;
+  color: #ffffff;
+  padding: 15rpx 20rpx;
+  box-sizing: border-box;
+  font-weight: bolder;
+  text-shadow: #000000 0 0 8rpx;
+  font-size: 34rpx;
+}
+.xiangmu_content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10rpx 0;
+}
+.shop_name{
+  padding: 20rpx 24rpx;
+  box-sizing: border-box;
+  background-color: #FFA500;
+  color: #ffffff;
+  text-shadow: #000000 0 0 8rpx;
+  font-weight: bolder;
+  font-size: 45rpx;
+}
+.shop_zhichi{
+  margin: 20rpx 15rpx;
+  box-shadow:5rpx 4rpx 10rpx #666;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.xiangmu_content view{
+  border: 1rpx solid #ffffff;
+  background-color: #00bc12;
+  height: 58rpx;
+  line-height: 58rpx;
+  font-weight: bolder;
+  border-radius: 16rpx;
+  width: 164rpx;
+  margin: 10rpx 8rpx;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: #000000 0 0 8rpx;
+  font-size: 26rpx;
+}
+.content{
+  padding: 20rpx 0 110rpx 0;
+}

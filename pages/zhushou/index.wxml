@@ -1,0 +1,76 @@
+<view class='all'>
+  <view class="search">
+    <image src="image/p1.png"></image>
+    <input type="text" class="search_input" placeholder="输入车型名称搜索"></input>
+  </view>
+  <view class="Classification_table">
+    <view class="Classification_table_left">
+    <scroll-view style="height:{{winHeight}}" scroll-into-view="{{to_Id}}" scroll-y="true">
+      <view class="classtable" id="RM">
+        <view class="classtable_title">热门</view>
+        <view class="classtable_content">
+
+          <view wx:for="{{HotList}}" 
+          wx:key="cm_brand" 
+          class="classtable_content1" 
+          bindtap="tolist"
+          id="{{item.cm_brand}}"
+          data-cm_brand_letter="{{item.cm_brand_letter}}"
+          >
+            <image src="{{'http://admin.hcbainuo.com'+item.cm_brand_image_url}}"></image>
+            <view>{{item.cm_brand}}</view>
+          </view>
+        </view>
+      </view>
+
+
+      <view wx:for="{{list}}" wx:key="item" wx:for-item="list_item" class="classtable" id="to{{list_item}}">
+        <view class="classtable_title" >{{list_item}}</view>
+        <view class="classtable_content">
+          <view class="classtable_content1" 
+          bindtap="tolist"
+          wx:for="{{AllList}}" 
+          wx:key="cm_brand"
+          wx:for-item="AllList_item"
+          id="{{AllList_item.cm_brand}}"
+          data-cm_brand_letter="{{letter[index].cm_brand_letter}}"
+          wx:if="{{AllList_item.cm_brand_letter == list_item}}" 
+          data-cm_brand_letter="{{AllList_item.cm_brand_letter}}">
+            <image src="http://admin.hcbainuo.com/{{AllList[index].cm_brand_image_url}}"></image>
+            <view>{{AllList[index].cm_brand}}</view>
+          </view>
+        </view>
+      </view>
+      </scroll-view>
+    </view>
+    <view class="Classification_table_right">
+      <view  bindtap="scrollTap" data-hash="RM" class="tip {{to_Id=='RM' ? 'checked_tip':''}} letter">热门</view>
+      <view  bindtap="scrollTap" data-hash="toA" class="tip {{to_Id=='toA' ? 'checked_tip':''}} letter">A</view>
+      <view  bindtap="scrollTap" data-hash="toB" class="tip {{to_Id=='toB' ? 'checked_tip':''}} letter">B</view>
+      <view  bindtap="scrollTap" data-hash="toC" class="tip {{to_Id=='toC' ? 'checked_tip':''}} letter">C</view>
+      <view  bindtap="scrollTap" data-hash="toD" class="tip {{to_Id=='toD' ? 'checked_tip':''}} letter">D</view>
+      <view  bindtap="scrollTap" data-hash="toE" class="tip {{to_Id=='toE' ? 'checked_tip':''}} letter">E</view>
+      <view  bindtap="scrollTap" data-hash="toF" class="tip {{to_Id=='toF' ? 'checked_tip':''}} letter">F</view>
+      <view  bindtap="scrollTap" data-hash="toG" class="tip {{to_Id=='toG' ? 'checked_tip':''}} letter">G</view>
+      <view  bindtap="scrollTap" data-hash="toH" class="tip {{to_Id=='toH' ? 'checked_tip':''}} letter">H</view>
+      <view  bindtap="scrollTap" data-hash="toI" class="tip {{to_Id=='toI' ? 'checked_tip':''}} letter">I</view>
+      <view  bindtap="scrollTap" data-hash="toJ" class="tip {{to_Id=='toJ' ? 'checked_tip':''}} letter">J</view>
+      <view  bindtap="scrollTap" data-hash="toK" class="tip {{to_Id=='toK' ? 'checked_tip':''}} letter">K</view>
+      <view  bindtap="scrollTap" data-hash="toL" class="tip {{to_Id=='toL' ? 'checked_tip':''}} letter">L</view>
+      <view  bindtap="scrollTap" data-hash="toM" class="tip {{to_Id=='toM' ? 'checked_tip':''}} letter">M</view>
+      <view  bindtap="scrollTap" data-hash="toN" class="tip {{to_Id=='toN' ? 'checked_tip':''}} letter">N</view>
+      <view  bindtap="scrollTap" data-hash="toO" class="tip {{to_Id=='toO' ? 'checked_tip':''}} letter">O</view>
+      <view  bindtap="scrollTap" data-hash="toP" class="tip {{to_Id=='toP' ? 'checked_tip':''}} letter">P</view>
+      <view  bindtap="scrollTap" data-hash="toQ" class="tip {{to_Id=='toQ' ? 'checked_tip':''}} letter">Q</view>
+      <view  bindtap="scrollTap" data-hash="toR" class="tip {{to_Id=='toR' ? 'checked_tip':''}} letter">R</view>
+      <view  bindtap="scrollTap" data-hash="toS" class="tip {{to_Id=='toS' ? 'checked_tip':''}} letter">S</view>
+      <view  bindtap="scrollTap" data-hash="toT" class="tip {{to_Id=='toT' ? 'checked_tip':''}} letter">T</view>
+      <view  bindtap="scrollTap" data-hash="toU" class="tip {{to_Id=='toU' ? 'checked_tip':''}} letter">U</view>
+      <view  bindtap="scrollTap" data-hash="toV" class="tip {{to_Id=='toV' ? 'checked_tip':''}} letter">V</view>
+      <view  bindtap="scrollTap" data-hash="toW" class="tip {{to_Id=='toW' ? 'checked_tip':''}} letter">W</view>
+      <view  bindtap="scrollTap" data-hash="toX" class="tip {{to_Id=='toX' ? 'checked_tip':''}} letter">X</view>
+      <view  bindtap="scrollTap" data-hash="toY" class="tip {{to_Id=='toY' ? 'checked_tip':''}} letter">Y</view>
+      <view  bindtap="scrollTap" data-hash="toZ" class="tip {{to_Id=='toZ' ? 'checked_tip':''}} letter">Z</view>
+    </view>
+  </view>
+</view>

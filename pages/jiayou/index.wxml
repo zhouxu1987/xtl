@@ -1,0 +1,14 @@
+<!--pages/chezheng/index.wxml-->
+<view class="index_swiper">
+  <swiper autoplay indicatorDots circular>
+    <swiper-item 
+    wx:for="{{SwiperList}}" 
+    wx:key="banner_url"
+    >
+      <navigator>
+        <image mode="widthFix" src="{{item.banner_path}}"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="count">加油优惠功能模块对接中……</view>

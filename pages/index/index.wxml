@@ -1,0 +1,170 @@
+<!--pages/mine/mine.wxml-->
+ <!-- 轮播图开始 -->
+
+<!--  /最外层view标签，类名为index_swiper-->
+<!-- 小技巧："标签名+.类名"回车，直接生成代码，view.index_swiper-->
+<view class="index_swiper">
+  <!--  
+      swiper是微信小程序自带的轮播图容器
+      1、swiper标签存在默认的宽度和高度，宽度:100%，高度：150px
+      2、image标签也存在默认的宽度和高度，宽度：320px，高度：240px
+      3、由于尺寸不符合项目要求，一般要从新设计图片和轮播图的宽高
+        3.1先看一下原图的宽高：750*340
+        3.2让图片的高度自适应，宽度=100%
+        3.3此时显示正常，但是当页面大小发生变化的时候，显示不完全
+           这是由于swiper存在默认高度的问题，需要将swiper容器的高换算成rpx即可
+      4、图片标签<image>存在一个mode属性
+        4.1 mode属性：渲染模式
+        缩放：1、widthFix：宽度不变，高度自动变化，保持原图宽高比不变
+             2、scaleToFill:不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素
+             3、aspectFit:保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。
+             4、aspectFill:保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。
+        裁剪：（top|bottom|center|left|right|top left(right)|bottom left（right））
+        我们这里使用第一种模式，mode="widthFix",
+      5、 在index.wxss中设定
+          index_swiper中的swiper
+          width:750rpx;//图片的大小就是750px
+          height:340rpx;//所以不用换算，直接拿来用就可以了
+          index_swiper中的swiper中的image
+          width:100%;//由于在image标签中已经设定mode="widthFix",图片的高会自适应，所以宽度设定100%就可以了
+  -->
+  <!--在swiper标签中加入一下属性
+    常用：
+    autoplay：自动轮播
+    circular ：循环轮播
+    indicatorDots ：显示面板指示点
+    不常用：
+    indicator-color='#fff' :指示点颜色
+    indicator-active-color='#fff'：当前页面指示点颜色
+    interval：自动切换时间间隔
+  -->
+  <swiper autoplay indicatorDots circular>
+    <!--  
+      /轮播项，只能放在swiper内部与swiper配合使用
+      /循环轮播项，关键字，wx:for="",双引号中的是循环项
+      /{{SwiperList}}，可以理解为从js页面中传递过来的变量
+      /wx:key="",一般与wx:for=""结合使用，**一定要成对写**
+      /wx:key="",循环的key，在循环项中找到唯一值，进行循环以提高效率
+    -->
+    <swiper-item 
+    wx:for="{{SwiperList}}" 
+    wx:key="banner_url"
+    >
+    
+      <!--  /页面链接标签，类似于HTML中的<a>标签-->
+      <navigator>
+        <!--  /图片标签-->
+        <image mode="widthFix" src="{{item.banner_path}}"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 轮播图结束 -->
+<!--  导航栏开始 -->
+<view class="inde_cate">
+  <navigator
+  wx:if="{{CatesList}}"
+  wx:for="{{CatesList}}"
+  wx:key="name"
+  url="{{item.navigator_url}}"
+  >
+    <image mode="widthFix" wx:if="{{item.image_src}}" src="{{item.image_src}}"></image>
+    <view class="text">{{item.name}}</view>
+  </navigator>
+</view>
+<!-- 导航栏结束 -->
+
+<!--横幅开始-->
+<!-- <view class="banner">
+  <image src="/static/images/index/01.jpg"></image>
+</view> -->
+<view class="index_class">
+  
+  <view class="index_class_l">
+    <navigator  url="../baoyang/index">
+    <image src="demo1.jpg" mode="widthFix"></image>
+      </navigator>
+  </view>
+
+  <view class="index_class_r">
+    <view class="index_class_r1">
+      <navigator  url="../rhy/rhy?class_id=2">
+      <image src="demo2.jpg" mode="widthFix"></image>
+    </navigator>
+    </view>
+
+    <view class="index_class_r1">
+      <navigator  url="../rhy/rhy?class_id=3">
+      <image src="demo3.jpg" mode="widthFix"></image>
+    </navigator>
+    </view>
+
+    <view class="index_class_r1">
+      <navigator  url="../rhy/rhy?class_id=4">
+      <image src="demo4.jpg" mode="widthFix"></image>
+    </navigator>
+    </view>
+
+    <view class="index_class_r1">
+      <navigator  url="../rhy/rhy?class_id=5">
+      <image src="demo5.jpg" mode="widthFix"></image>
+    </navigator>
+    </view>
+  </view>
+</view>
+<!--横幅结束-->
+<!--横幅开始-->
+<view class="banner">
+  <image src="/static/images/index/02.jpg" class="index_banner_img"></image>
+</view>
+<!--横幅结束-->
+
+<!--商品列表开始-->
+<view class="goods">
+
+
+
+
+  <view class="goods_item" wx:for="{{good_list_1}}" wx:key="id">
+    <navigator open-type="navigate"  url="{{'/pages/goods/detail/index?id='+item.id}}">
+      <view class="goods_item_img">
+        <image class="goods_item_img_toutu" src="{{'http://admin.hcbainuo.com/uploads/'+item.goods_pic}}"></image>
+      </view>
+      <view class="goods_item_name">
+        <text>{{item.goods_name}}</text>
+      </view>
+      <view class="goods_item_content">
+        <text>￥{{item.price}}</text>
+        <navigator open-type="navigate"  url="{{'/pages/goods/detail/index?id='+item.id}}">详情</navigator>
+      </view>
+    </navigator>
+  </view>
+
+
+
+<!-- <view class="banner">
+  <image src="/static/images/index/03.jpg"></image>
+</view>
+
+
+  <view class="goods_item" wx:for="{{good_list_10}}" wx:key="id">
+      <view class="goods_item_img">
+        <image class="goods_item_img_toutu" src="{{'http://admin.hcbainuo.com/uploads/'+item.goods_pic}}"></image>
+      </view>
+      <view class="goods_item_name">
+        <text>{{item.goods_name}}</text>
+      </view>
+      <view class="goods_item_content">
+        <text>￥{{item.price}}</text>
+        <navigator open-type="navigate"  url="{{'/pages/goods/detail/index?id='+item.id}}">详情</navigator>
+      </view>
+  </view> -->
+
+
+<!--横幅开始-->
+<!-- <view class="banner">
+  <image src="/static/images/index/04.jpg"></image>
+</view> -->
+<!--横幅结束-->
+<image src="/static/images/botton.jpg" class="index_footimg"></image>
+</view>

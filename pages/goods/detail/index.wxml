@@ -1,0 +1,84 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="index_swiper">
+  <swiper autoplay indicatorDots circular>
+
+    <swiper-item>
+      <navigator>
+        <image mode="widthFix" src="{{goods_img}}">
+        </image>
+      </navigator>
+    </swiper-item>
+
+    <swiper-item>
+      <navigator>
+        <image mode="widthFix" src="{{goods_img}}">
+        </image>
+      </navigator>
+    </swiper-item>
+
+  </swiper>
+</view>
+
+<view class="goods_title">
+  <view class="goods_item_content">
+    <text class="xj">￥{{price*1}}元</text>
+    <!-- <text>原价:￥{{goods_info.m_old_price}}元</text> -->
+    <text class="yj">原价:￥{{price*3}}</text>
+  </view>
+  <view class="goods_item_name">
+    <text>{{goods_info.goods_name}}</text>
+  </view>
+  <view class="goods_item_name_s">
+    <text>{{goods_info.goods_name}}</text>
+  </view>
+
+</view>
+
+<view class="baozhang">
+  <view class="baozhang_b">小螳螂正品保障，专业保险公司承保</view>
+  <view class="baozhang_s">1000万正品险担保 累计赔付高达100万</view>
+</view>
+
+<view class="xq">
+
+<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+
+<include src="/pages/common/goods-picker.wxml"></include>
+</view>
+
+<!--底部工具栏开始-->
+<view class="bottom_tool">
+
+  <navigator class="tool_item" url="/pages/index/index" open-type="switchTab">
+    <!--
+      因为要跳转到tabBar页面所以要加
+      open-type="switchTab"属性
+  -->
+    <view class="iconfont iconshouye"></view>
+    <view>首页</view>
+  </navigator>
+
+  <view class="tool_item">
+    <view class="iconfont iconkefu"></view>
+    <view>分享</view>
+    <button open-type="share"></button>
+  </view>
+
+  <view class="tool_item">
+    <view class="iconfont iconkefu"></view>
+    <view>联系客服</view>
+    <button open-type="contact"></button>
+  </view>
+
+  <!-- <view class="tool_item btn_buy" 
+      open-type="navigate"
+      bindtap="goUrl"
+      data-url="/pages/goods/order/index?id={{goods_id}}">
+      立即购买
+    </view> -->
+  <view class="tool_item btn_buy" bindtap="Num">
+    立即购买
+  </view>
+
+</view>
+<!--底部工具栏结束-->

@@ -1,0 +1,44 @@
+<view class='all'>
+  <view class="content">
+  <!--左半边导航-->
+    <view class="content_left">
+      <!--首写字母-->
+      <view class="left_title">{{cm_brand_letter}}</view>
+      <view class="left_content">
+        <view 
+        class="left_brand" 
+        bindtap="tolist" 
+        wx:for="{{left_list}}" 
+        wx:key="cm_brand"
+        data-cm_brand="{{item.cm_brand}}" 
+        data-cm_brand_letter="{{item.cm_brand_letter}}"
+        >
+          <image src="{{'http://admin.hcbainuo.com/'+item.cm_brand_image_url}}"></image>
+          <text>{{item.cm_brand}}</text>
+        </view>
+
+      </view>
+    </view>
+    <!--右半边结果-->
+    <view class="content_right">
+        
+        <view class="right_list" 
+        wx:for="{{right_list}}"
+        wx:for-item="b_list" 
+        wx:key="cm_factory">
+          <view class="right_title">{{b_list.cm_factory}}</view>
+          <view 
+            class="right_list_content" 
+            bindtap="toModel"
+            wx:for="{{right_list[index].cm_cars}}"
+            wx:for-item="list"
+            wx:key="cm_cars"
+            data-cm_models="{{list.cm_car}}"  
+            data-cm_brands="{{cm_brand}}" 
+            data-cm_factory="{{b_list.cm_factory}}">
+            {{list.cm_car}}
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

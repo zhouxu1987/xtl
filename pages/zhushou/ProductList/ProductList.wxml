@@ -1,0 +1,59 @@
+<view class="all">
+  <view class="head">
+    <swiper autoplay="true" indicator-dots="true">
+      <swiper-item>
+        <image src="/static/images/logo/Logo.jpg"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="name">发动机型号</view>
+  <view class="parameter">
+    <view class="parameter_title">规格参数</view>
+    <view class="parameter_content">
+      <view class="parameter_content1" wx:for="{{cm_engine_model}}">
+        {{cm_engine_model[index].cm_engine_model}}/
+        {{cm_engine_model[index].cm_model_year}}
+      </view>
+    </view>
+  </view>
+ 
+</view>
+
+<!-- <view class="all">
+  <view class="head">
+    <swiper autoplay="true" indicator-dots="true">
+      <swiper-item>
+        <image src="../image/p2.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../image/p2.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../image/p2.jpg"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="name">机油滤清器：豹王 TO-6739</view>
+  <view class="parameter">
+    <view class="parameter_title">规格参数</view>
+    <view class="parameter_content">
+      <view class="parameter_content1">外径</view>
+      <view class="parameter_content1">66mm</view>
+      <view class="parameter_content1">高</view>
+      <view class="parameter_content1">75mm</view>
+      <view class="parameter_content1">螺纹/孔径</view>
+      <view class="parameter_content1">3/4"-16</view>
+    </view>
+  </view>
+  <view class="parameter">
+    <view class="parameter_title">产品互换码</view>
+    <view class="parameter_content">
+      <view class="parameter_content1">曼牌</view>
+      <view class="parameter_content1">W68/1；W68/3</view>
+      <view class="parameter_content1">曼牌</view>
+      <view class="parameter_content1">W68/1；W68/3W68/1；W68/3W68/1；W68/3W68/1；W68/3W68/1；W68/3W68/1；W68/3W68/1；W68/3</view>
+      <view class="parameter_content1">曼牌</view>
+      <view class="parameter_content1">W68/1；W68/3</view>
+    </view>
+  </view>
+</view> -->

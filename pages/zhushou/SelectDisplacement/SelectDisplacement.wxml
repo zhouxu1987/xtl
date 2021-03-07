@@ -1,0 +1,15 @@
+<view class="all">
+  <view class="content">
+    <view class="title">选择发动机排量</view>
+    <view class="model_list">
+      <view 
+      class="model_list_content" 
+      bindtap="toProductList" 
+      wx:for="{{cm_displacement}}" 
+      data-params="{{params}}&cm_fuel_type={{item.cm_fuel_type}}&cm_displacement={{item.cm_displacement}}"
+      >
+      {{item.cm_displacement}}|{{item.cm_fuel_type}}
+    </view>
+    </view>
+  </view>
+</view>

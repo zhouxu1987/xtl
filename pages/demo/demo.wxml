@@ -1,0 +1,38 @@
+<view class="index_class">
+  <view class="index_class_l">
+    <image src="demo1.jpg" mode="widthFix"></image>
+  </view>
+  <view class="index_class_r">
+    <view class="index_class_r1">
+      <image src="demo2.jpg" mode="widthFix"></image>
+    </view>
+    <view class="index_class_r1">
+      <image src="demo3.jpg" mode="widthFix"></image>
+    </view>
+    <view class="index_class_r1">
+      <image src="demo4.jpg" mode="widthFix"></image>
+    </view>
+    <view class="index_class_r1">
+      <image src="demo5.jpg" mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+
+
+<view class="index_class2">
+  <view class="index_class_l">
+    <image src="aaa.jpg" mode="widthFix"></image>
+  </view>
+  <view class="index_class_r">
+    <view class="index_class_r1">
+      <image src="aaa.jpg" mode="widthFix"></image>
+    </view>
+    <view class="index_class_r1">
+      <image src="aaa.jpg" mode="widthFix"></image>
+    </view>
+    <view class="index_class_r1">
+      <image src="aaa.jpg" mode="widthFix"></image>
+    </view>
+  
+  </view>
+</view>

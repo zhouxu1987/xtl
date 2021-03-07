@@ -1,0 +1,34 @@
+<!--pages/main/address/address.wxml-->
+<view class="address" wx:for="{{list}}" wx:for-index="index">
+  <view class="address_one">
+    <view class="address_one_top">
+      <text class="address_one_top_name">{{item.name}}</text>
+      <text class="address_one_top_phone">{{item.phone}}</text>
+    </view>
+    <view class="address_one_bot">{{item.region.province}}{{item.region.city}}{{item.region.region}}
+    </view>
+  </view>
+  <view class="address_two">
+    <view class="address_two_left" data-idx="{{index}}" data-id="{{item.address_id}}" bindtap="setMoren">
+      <image src="{{item.img}}"></image>
+      <text>默认地址</text>
+    </view>
+    <view class="address_two_right">
+      <navigator hover-class="none" url="add?address_id={{item.address_id}}">
+        <image src="../../../image/binji.png"></image>
+      </navigator>
+      <image src="../../../image/shanchu.png" data-id="{{item.address_id}}" bindtap="dellete"></image>
+    </view>
+  </view>
+</view>
+
+<navigator hover-class="none" url="add">
+  <view class="address_add">＋添加新地址</view>
+</navigator>
+<!-- 无商品
+<view wx:if="{{ !list.length }}">
+  <view class="yoshop-notcont">
+    <image src="../../../image/no_content.png"></image>
+    <view class="cont">亲，您还没添加收货信息哦</view>
+  </view>
+</view> -->

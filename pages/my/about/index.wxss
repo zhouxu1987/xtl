@@ -1,0 +1,18 @@
+/* pages/main/about/about.wxss */
+page {
+  background-color: #ffffff;
+}
+.about {
+  width: calc(100% - 60rpx);
+  padding: 30rpx;
+  text-align: center;
+}
+.about view {
+  width: 100% !important;
+}
+.about text {
+  width: 100% !important;
+}
+.about image {
+  width: 100% !important;
+}

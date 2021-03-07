@@ -1,0 +1,4 @@
+/* pages/cs2/index.wxss */
+.check{
+  margin-top: 20rpx;
+}

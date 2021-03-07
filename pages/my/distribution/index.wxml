@@ -1,0 +1,5 @@
+<!--pages/my/distribution/index.wxml-->
+<view class="bg">
+  <image src="{{img_src}}"></image>
+</view>
+

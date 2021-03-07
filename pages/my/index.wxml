@@ -1,0 +1,39 @@
+<!--pages/main/main.wxml-->
+<view class="main_top">
+  <view class="main_top_img" wx:if="{{token != ''}}">
+      <open-data  class="" type="userAvatarUrl"></open-data>
+  </view>
+
+  <view class="main_top_img" wx:if="{{token == ''}}">
+      <image class="main_top_img2" mode="aspectFit"  src="/static/images/logo/Logo.jpg"></image>
+  </view>
+
+  <view class="main_top_name" wx:if="{{token!=''}}">
+    <open-data class="wexin_one" lang="zh_CN" type="userNickName"></open-data>
+  </view>
+
+
+  <view class="main_top_jifen" wx:if="{{token != ''}}" bindtap="goJf">我的积分：{{jifen}} 积分</view>
+  <view class="main_top_jifen" wx:if="{{token == ''}}" bindtap="goUrl">点击登录</view>
+
+</view>
+<view class="main_top_two"></view>
+<!-- 个人中心菜单 -->
+<view class="main_menu">
+  <block wx:for="{{menuList}}" wx:key="name">
+  <view class="main_menu_one" wx:if="{{item.url == 'hexiao'}}" bindtap="hexiao">
+    
+      <image src="{{item.icon}}" class="main_menu_one_img"></image>
+      <text class="main_menu_one_text">{{item.name}}</text>
+    </view>
+    <view class="main_menu_one" wx:elif="{{item.url != ''}}" data-url="{{item.url}}" bindtap="goUrl">
+      <image src="{{item.icon}}" class="main_menu_one_img"></image>
+      <text class="main_menu_one_text">{{item.name}}</text>
+    </view>
+    <view class="main_menu_one" wx:else="{{item.url == ''}}" style="position: relative;">
+      <image src="{{item.icon}}" class="main_menu_one_img"></image>
+      <text class="main_menu_one_text">{{item.name}}</text>
+      <button open-type="contact" sessionFrom="weapp" size="27" style="opacity: 0;position:absolute;top:0px;left:0px;display:block;width:100%;height:100%;" type="default-light"></button>
+    </view>
+  </block>
+</view>

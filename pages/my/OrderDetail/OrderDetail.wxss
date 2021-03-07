@@ -1,0 +1,169 @@
+.bg {
+  background: linear-gradient(to bottom,#ffc800 0%,#ffb43e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffb43e, endColorstr=#fd9526,gradientType='1');
+  -webkit-box-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24rpx;
+  font-size: 26rpx;
+  height: 160rpx;
+  color: #fff;
+}
+.fui-list-group {
+  background-color: #fff;
+  position: relative;
+  margin-top: 20rpx;
+}
+.fui-list {
+  position: relative;
+  display: flex;
+  padding: 16rpx 24rpx;
+  transition-duration: 300ms;
+  align-items: center;
+  overflow: hidden;
+}
+.fui-list-media {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  align-items: center;
+  margin-right: 20rpx;
+  color: #000;
+  position: relative;
+}
+.fui-list-media image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.fui-cell-group {
+  margin-top: 20rpx;
+  background-color: #fff;
+  line-height: 1.4;
+  font-size: 32rpx;
+  overflow: hidden;
+  position: relative;
+}
+.fui-cell-group .fui-cell {
+  position: relative;
+  padding: 24rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  transition-duration: 300ms;
+  transition-property: background-color;
+}
+.fui-cell-group .fui-cell .fui-cell-label {
+  position: relative;
+  display: block;
+  width: 160rpx;
+  padding: 0;
+  font-size: 28rpx;
+  color: #666;
+}
+.fui-cell-group .fui-cell .fui-cell-info {
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #000;
+}
+.fui-cell-group .fui-cell .fui-cell-remark {
+  color: #888;
+  text-align: right;
+  font-size: 28rpx;
+  margin-right: 8rpx;
+}
+.text-danger {
+  color: #ff5555;
+}
+.fui-cell-group {
+  margin-top: 20rpx;
+  background-color: #fff;
+  line-height: 1.4;
+  font-size: 32rpx;
+  overflow: hidden;
+  position: relative;
+}
+.order-info {
+  padding: 20rpx 0;
+}
+.order-info view,.send-code {
+  padding: 6rpx 25rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+
+.btn {
+  -moz-appearance: none;
+  background: rgba(0,0,0,0) none repeat scroll 0 0;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 76rpx;
+  padding: 0 20rpx;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 1px solid #f90;
+  margin: 0.5em;
+  user-select: none;
+  transition-duration: 300ms;
+  transition-property: background-color;
+  display: inline-block;
+  z-index: 100;
+}
+.btn.btn-sm {
+  height: 56rpx;
+  line-height: 52rpx;
+  margin: 0;
+  font-size: 26rpx;
+}
+.btn.btn-default-o {
+  background: transparent;
+  color: #666;
+  border: 1px solid #666;
+}
+.btn {
+  height: 56rpx;
+  line-height: 52rpx;
+  border-radius: 40rpx;
+  padding: 0 26rpx;
+  margin-top: 24rpx;
+  font-size: 26rpx;
+}
+.btn.btn-sm {
+  margin-top: 24rpx;
+  margin-right: 24rpx;
+}
+.fui-footer {
+  text-align: right;
+}
+.fui-footer.fui-iphonex-navbar {
+  bottom: 68rpx;
+}
+.fui-navbar,.fui-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 100rpx;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  z-index: 999;
+}

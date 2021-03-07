@@ -1,0 +1,476 @@
+/* pages/index/index.wxss */
+page{
+  margin-bottom: 90rpx;
+}
+/**轮播图 start**/
+.swiper {
+  height: 750rpx;
+  width: 100%;
+ }
+ .swiper image {
+  height: 100%;
+  width: 100%;
+ }
+ .index_swiper swiper{
+   width:750rpx;
+   height:750rpx;
+ }
+ .index_swiper swiper image{
+   width:100%;
+ }
+  /**轮播图 end**/
+
+  /**导航 start**/
+.inde_cate{
+  display: flex;/*最外层伸缩盒子*/
+}
+.inde_cate navigator{
+  flex: 1;/*宽度占1份*/
+  padding: 20rpx;/*内边距20rpx*/
+}
+.inde_cate navigator image{
+  width: 100%;/*父元素多宽，我也是多宽*/
+}
+
+
+.banner{
+  width:100%;
+  height: 80rpx;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.banner image{
+  width: 720rpx;
+  background-color: #fff;
+  height: 80rpx;
+  border-radius:15rpx;
+}
+.goods_title{
+  background: #fff;
+}
+.goods{
+  width: 100%;/*设置最外层的宽度为100%*/
+  background-color: #3f3f3f;
+  display: flex;/*使用弹性布局*/
+  /* 默认横向，省略没写 */
+  flex-wrap: wrap;/*对超出屏幕范围的子元素进行换行*/
+  justify-content: space-between;
+  padding: 0rpx 15rpx;
+}
+.goods_item{
+  width: 350rpx;
+  height: 450rpx;
+  background: #f36f6f;  
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  border-radius:15rpx; 
+}
+
+.goods_item_img{
+  width: 100%;
+  /* border-radius:25rpx; */
+}
+.goods_item_img_toutu{
+  width: 350rpx;
+  height: 300rpx;
+  border-radius:15rpx 15rpx 0 0;
+}
+.goods_item_content{
+  /* display: flex; */
+  padding: 10rpx;
+  justify-content:space-between;
+}
+.goods_item_name{
+  padding: 10rpx;
+  font-size:32rpx;
+  flex:2;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+
+.bottom_tool{
+  position: fixed;
+  left: 0;
+  bottom: 0 ;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+}
+.bottom_tool .tool_item{
+  flex: 1;
+  display: flex;/*伸缩盒子，让她在一行显示*/
+  flex-direction: column;/*改变主轴的方向，由横向变竖向*/
+  justify-content: center;/*让元素进行垂直居中*/
+  align-items: center;/*让元素进行水平居中*/
+  position: relative;/*相对定位*/
+}
+.bottom_tool .tool_item button{
+  position:absolute;
+  top: 0;/*紧贴上边*/
+  left: 0;/*紧贴左边*/
+  width: 100%;/*跟父元素一样宽*/
+  height: 100%;/*跟父元素一样高*/
+  opacity: 0;/*透明度为0*/
+}
+.bottom_tool .btn_buy{
+  flex:2;
+  display: flex;/*伸缩盒子，让她在一行显示*/
+  flex-direction: column;/*改变主轴的方向，由横向变竖向*/
+  justify-content: center;/*让元素进行垂直居中*/
+  align-items: center;/*让元素进行水平居中*/
+  color: #fff;
+  background-color: red;
+  font-size: 30rpx;
+  font-weight: 600;/*字体加粗*/
+}
+
+/*  */
+/*  */
+
+.fui-modal {
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1001;
+}
+.option-picker {
+  height: auto;
+  width: 100%;
+  padding-bottom: 90rpx;
+  z-index: 1001;
+}
+.option-picker-inner {
+  background: #fff;
+  border-top: 2rpx solid #eee;
+  box-shadow: 0 0 8rpx rgba(0,0,0,0.1);
+}
+.option-picker .option-picker-cell.goodinfo {
+  padding-left: 220rpx;
+  padding-top: 20rpx;
+  position: relative;
+}
+.option-picker .option-picker-cell {
+  padding: 8rpx 20rpx 20rpx 20rpx;
+}
+.option-picker .option-picker-cell.goodinfo .closebtn {
+  width: 44rpx;
+  height: 44rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  text-align: center;
+  line-height: 44rpx;
+  color: #999;
+}
+.icox {
+  font-family: "icox"!important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.option-picker .option-picker-cell.goodinfo .img {
+  height: 168rpx;
+  width: 168rpx;
+  background: #fff;
+  padding: 4rpx;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  position: absolute;
+  top: -50rpx;
+  left: 20rpx;
+  box-shadow: 0 0 8rpx rgba(0,0,0,0.1);
+}
+radio,image {
+  vertical-align: middle;
+}
+.option-picker .option-picker-cell.goodinfo .info {
+  font-size: 28rpx;
+  height: 37rpx;
+  line-height: 37rpx;
+}
+.text-danger {
+  color: #ff5555;
+}
+
+.option-picker .option-picker-cell.goodinfo .info-price .price {
+  font-size: 32rpx;
+}
+.option-picker .option-picker-cell.goodinfo .info-total {
+  font-size: 26rpx;
+  color: #999;
+}
+.option-picker .option-picker-cell.goodinfo .info {
+  font-size: 28rpx;
+  height: 37rpx;
+  line-height: 37rpx;
+}
+.option-picker .option-picker-cell.goodinfo .info-titles {
+  font-size: 26rpx;
+  color: #000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.option-picker .option-picker-cell.goodinfo .info {
+  font-size: 28rpx;
+  height: 37rpx;
+  line-height: 37rpx;
+}
+.option-picker .option-picker-options {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 560rpx;
+}
+.option-picker .option-picker-cell.option {
+  position: relative;
+}
+.option-picker .option-picker-cell {
+  padding: 8rpx 20rpx 20rpx 20rpx;
+}
+.option-picker .option-picker-cell.option .title {
+  font-size: 28rpx;
+  height: auto;
+  overflow: hidden;
+  color: #000;
+  line-height: 78rpx;
+}
+.option-picker .option-picker-cell.option .select {
+  font-size: 29rpx;
+  color: #666;
+  height: auto;
+  overflow: hidden;
+}
+.option-picker .option-picker-cell.option .select .nav {
+  height: auto;
+  width: auto;
+  border: 0;
+  float: left;
+  margin: 16rpx 20rpx 0 0;
+}
+.btn.btn-default {
+  color: #000;
+}
+
+.btn {
+  -moz-appearance: none;
+  background: rgba(0,0,0,0) none repeat scroll 0 0;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 76rpx;
+  padding: 0 20rpx;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 1px solid #f90;
+  margin: 0.5em;
+  user-select: none;
+  transition-duration: 300ms;
+  transition-property: background-color;
+  display: inline-block;
+  z-index: 100;
+}
+.fui-cell-group.nomargin {
+  margin-top: 0;
+}
+.fui-cell-group {
+  margin-top: 20rpx;
+  background-color: #fff;
+  line-height: 1.4;
+  font-size: 32rpx;
+  overflow: hidden;
+  position: relative;
+}
+.fui-cell-group .fui-cell {
+  position: relative;
+  padding: 24rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  transition-duration: 300ms;
+  transition-property: background-color;
+}
+.fui-cell-group .fui-cell .fui-cell-label {
+  position: relative;
+  display: block;
+  width: 160rpx;
+  padding: 0;
+  font-size: 28rpx;
+  color: #666;
+}
+.fui-cell-group .fui-cell .fui-cell-info {
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.fui-number {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  font-size: 33rpx;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0;
+  height: 61rpx;
+  width: 205rpx;
+}
+.fui-number .minus.disabled,.fui-number .plus.disabled {
+  background: #fff;
+  color: #ebebeb;
+}
+.fui-number .minus,.fui-number .plus {
+  height: inherit;
+  width: 61rpx;
+  font-size: 41rpx;
+  font-weight: bold;
+  color: #999;
+  position: relative;
+  text-align: center;
+  line-height: 61rpx;
+  background: #f7f7f7;
+  z-index: 1;
+}
+.fui-number .num {
+  -webkit-box-flex: 1;
+  flex: 1;
+  height: 61rpx;
+  overflow: hidden;
+  line-height: inherit;
+  color: #666;
+  text-align: center;
+  border: 0;
+  font-size: 28rpx;
+}
+.option-picker .fui-navbar {
+  text-shadow: none;
+  height: 90rpx;
+}
+.fui-navbar,.fui-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 98rpx;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+.option-picker .fui-navbar .btn {
+  border: none;
+  font-size: 29rpx;
+  color: #fff;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  line-height: 90rpx;
+}
+.fui-navbar .nav-item {
+  position: relative;
+  display: table-cell;
+  height: 100rpx;
+  text-align: center;
+  vertical-align: middle;
+  width: 1%;
+  color: #999;
+  padding-top: 4rpx;
+}
+.option-picker .fui-navbar .buybtn,.option-picker .fui-navbar .confirmbtn {
+  background: #fd5555;
+}
+
+.option-picker .fui-navbar .btn {
+  border: none;
+  font-size: 29rpx;
+  color: #fff;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  line-height: 90rpx;
+}
+.fui-navbar .nav-item {
+  position: relative;
+  display: table-cell;
+  height: 100rpx;
+  text-align: center;
+  vertical-align: middle;
+  width: 1%;
+  color: #999;
+  padding-top: 4rpx;
+}
+.xj{
+  color: red;
+  font-size:50rpx;
+  font-weight: 600;
+}
+.yj{
+  text-decoration:line-through;
+ 
+  margin-left: 20rpx;
+  color: #999;
+}
+.goods_item_name_s{
+  padding: 10rpx;
+  font-size:26rpx;
+  flex:2;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.baozhang{
+  background: #fff;
+  margin-top: 10rpx;
+  padding: 20rpx;
+}
+.baozhang_b{
+  font-weight: 500;
+  font-size: 30rpx;
+
+}
+.baozhang_s{
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.xq{
+  background-color: #fff;
+  margin-top: 10rpx;
+  text-align: center;
+  padding-top: 10rpx;
+}
+
+.xq  image{
+  width: 100% !important;
+}

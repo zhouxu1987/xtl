@@ -1,0 +1,41 @@
+<!--pages/mendian/index.wxml-->
+<view class="tab_bar">
+  
+  <view>请选择范围</view>
+  <view>按距離排序</view>
+  <view>按好评率排序</view>
+  </view>
+    <view 
+      class='mendian'
+      wx:for="{{mdList}}"
+      wx:key="pic"
+      data-shop_id="{{item.id}}"
+      data-shop_name="{{item.shop_name}}"
+      data-address="{{item.store_address}}"
+      data-pic="{{item.pic}}"
+      bindtap="select"
+    >
+    <view class="mentou">
+      <image class="toutu" src="{{img_url+item.pic}}" mode="widthFix"/>
+    </view>  
+  
+    <view class="nr">
+      <text class="mc">{{item.shop_name}}</text>  
+      <text>主营：汽车维修</text>
+      <text>地址：{{item.store_address}}</text>
+    </view>
+  
+    <view class="right">
+       <text>距离您{{item.distance}}公里</text>
+       <view
+        bindtap="toshop" 
+        data-id="{{item.id}}"
+        >
+        进店逛逛</view>
+       <!-- <button size="mini" plain="true">进店逛逛</button>  -->
+       <text>好评率{{item.star=="0.00"?"100%":item.star}}</text>
+    </view>
+  </view>
+  
+  
+  

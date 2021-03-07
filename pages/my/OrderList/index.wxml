@@ -1,0 +1,67 @@
+<!--pages/main/order/order.wxml-->
+<view class="service_top">
+  <view wx:for="{{shaixuan}}" wx:key="name" class="service_top_one" wx:for-index="index" data-id="{{index}}" bindtap="swichCate">
+    <text class="{{item.classname}}">{{item.name}}</text>
+  </view>
+</view>
+
+<view class="order_one" wx:for="{{list}}" wx:key="order_id">
+  <view class="order_one_top">
+    <text>订单号：{{item.order_id}}</text>
+    <text>{{item.goods.g_name}}</text>
+  </view>
+
+  <navigator hover-class="none" url="../OrderDetail/OrderDetail?order_id={{item.order_id}}">
+    <view class="order_mid" wx:for="{{item.goods}}"  wx:key="key" wx:for-item="items">
+      <view class="submit_top_good2">
+        <image src="{{'http://admin.hcbainuo.com/uploads/'+items.g_pic}}" class="submit_top_good_left"></image>
+        <view class="submit_top_good_right">
+          <text class="submit_top_good_name">{{items.g_name}}</text>
+          <text class="submit_top_good_gg voerhidden">{{items.goods_attr}}</text>
+          <view class="submit_top_good_bot">
+            <text class="submit_top_good_price">¥ {{items.g_price}}</text>
+            <text class="submit_top_good_num">×{{items.g_num}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="order_mid_all">共{{items.g_num}}件商品 合计：¥{{items.g_price}} 需付款: ¥{{items.g_price}}</view>
+    </view>
+  </navigator>
+
+  <view class="order_bot">
+    <view class="shiwuorder_caozuo_cancle" wx:if="{{ item.pay_status.value!=10 }}" catchtap="cancelOrder" data-id="{{item.order_id}}">取消订单</view>
+    <block wx:if="{{item.pay_status.value!=10}}">
+      <view class="shiwuorder_caozuo_pay" data-id="{{item.order_id}}" catchtap="payOrder">立即支付</view>
+    </block>
+    <navigator hover-class="none" url="express/express?order_id={{item.order_id}}" wx:if="{{item.delivery_status.value==20 && item.order_status.value!=21 && item.order_status.value!=20}}">
+      <view class="shiwuorder_caozuo_cancle">查看物流</view>
+    </navigator>
+    <block wx:if="{{item.order_status.value==30 && item.is_comment==0}}">
+      <navigator hover-class="none" url="../pl/pl?order_id={{item.order_id}}">
+        <view class="shiwuorder_caozuo_pay">评价</view>
+      </navigator>
+    </block>
+    <view wx:if="{{item.delivery_status.value==20 && item.receipt_status.value == 10}}" class="shiwuorder_caozuo_cancle" catchtap="receipt" data-id="{{item.order_id}}">确认收货</view>
+    <!-- <view class="shiwuorder_caozuo_pay">提醒发货</view> -->
+    <block wx:if="{{ item.order_status.value!=21 && item.order_status.value!=20}}">
+      <navigator hover-class="none" url="../th/th?order_id={{item.order_id}}" wx:if="{{ item.pay_status.value==20 && item.delivery_status.value==10 }}">
+        <view class="shiwuorder_caozuo_cancle">退款</view>
+      </navigator>
+    </block>
+    <block wx:if="{{ item.order_status.value==30 }}">
+      <navigator hover-class="none" url="../th/th?order_id={{item.order_id}}">
+        <view class="shiwuorder_caozuo_cancle">退款</view>
+      </navigator>
+    </block>
+  </view>
+
+</view>
+
+
+<!-- 无商品 -->
+<view wx:if="{{ !list.length }}">
+  <view class="yoshop-notcont">
+    <!-- <image src="../../../static/images/logo/Logo.jpg"></image> -->
+    <text class="cont">亲，暂无数据信息哦</text>
+  </view>
+</view>

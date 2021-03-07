@@ -1,0 +1,42 @@
+<!--pages/mendian/index.wxml-->
+<view class="tab_bar">
+  <view class="bar_nav">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{array[index]}}
+    </view>
+  </picker>
+  </view>
+  <view bindtap="Distance" data-property="distance" class="bar_nav">按距离排序</view>
+  <view bindtap="Distance" data-property="star" class="bar_nav">按好评率排序</view>
+</view>
+  <view 
+    class='mendian'
+    wx:for="{{mdList}}"
+    wx:key="pic"
+    bindtap="toshop" 
+      data-id="{{item.id}}"
+  >
+  <view class="mentou">
+    <image class="toutu" src="{{img_url+item.pic}}" mode="widthFix"/>
+  </view>  
+
+  <view class="nr">
+    <text class="mc">{{item.shop_name}}</text>  
+    <text>主营：汽车维修</text>
+    <text>地址：{{item.store_address}}</text>
+  </view>
+
+  <view class="right">
+     <text>距离您{{item.distance}}公里</text>
+     <view
+      bindtap="toshop" 
+      data-id="{{item.id}}"
+      >
+      进店逛逛</view>
+     <!-- <button size="mini" plain="true">进店逛逛</button>  -->
+     <text>好评率{{item.star=="0.00"?"100%":item.star}}</text>
+  </view>
+</view>
+
+

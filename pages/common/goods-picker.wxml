@@ -1,0 +1,104 @@
+<view class="fui-modal goods-picker in goodsdetail fui-iphonex-navbar" wx:if="{{num_ok==1}}">
+  <view class="option-picker">
+    <view class="option-picker-inner">
+      <view class="option-picker-cell goodinfo">
+        <view bindtap="emptyActive" class="closebtn">
+          <!-- <i class="icox icox-guanbi1" style="font-size:44rpx"></i> -->
+          <image src="/static/images/error.png" style="height:44rpx;width:44rpx"></image>
+        </view>
+        <view class="img" style="overflow:visible">
+          <image class="thumb"
+            src="https://w.hcbainuo.com/attachment/images/14/2020/11/Cfy94d499ymZQ6aZ4MuPWKFpDCx1FM.jpg"
+            style="width:100%;height:100%;overflow:visible"></image>
+        </view>
+
+        <view class="info info-price text-danger">
+          <span style="vertical-align: middle;">¥
+            <span class="price">{{num_pay}}元</span>
+          </span>
+        </view>
+        <view class="info info-total"></view>
+        <view class="info info-titles">{{num_title}}</view>
+      </view>
+      <view class="option-picker-options">
+        <view class="option-picker-cell option spec">
+          <view class="title">{{goods_info.goods_name}}</view>
+          <view class="select">
+
+            <a bindtap="specsTap" 
+            class="btn btn-default btn-sm nav spec-item" 
+            data-id="1" 
+            data-idx="0"
+            data-title="20"  
+            style="background:{{goods_num==1?'red':'#f7f7f7'}}">1</a>
+
+            <a bindtap="specsTap" 
+            class="btn btn-default btn-sm nav spec-item" 
+            data-id="2" 
+            data-idx="0"
+            data-title="20"  
+            style="background:{{goods_num==2?'red':'#f7f7f7'}}">2</a>
+
+
+              <a bindtap="specsTap" class="btn btn-default btn-sm nav spec-item" data-id="3" data-idx="0"
+              data-title="20" 
+              style="background:{{goods_num==3?'red':'#f7f7f7'}}">3</a>
+
+              <a bindtap="specsTap" class="btn btn-default btn-sm nav spec-item" data-id="4" data-idx="0"
+              data-title="20"  
+              style="background:{{goods_num==4?'red':'#f7f7f7'}}">4</a>
+
+              <a bindtap="specsTap" class="btn btn-default btn-sm nav spec-item" data-id="5" data-idx="0"
+              data-title="20"  
+              style="background:{{goods_num==5?'red':'#f7f7f7'}}">5</a>
+
+              <a bindtap="specsTap" class="btn btn-default btn-sm nav spec-item" data-id="6" data-idx="0"
+              data-title="20"  
+              style="background:{{goods_num==6?'red':'#f7f7f7'}}">6</a>
+
+          </view>
+        </view>
+
+        <!-- <view class="option-picker-cell option spec">
+          <view class="title">适配黏度:全合成SN 5W</view>
+          <view class="select">
+            <a bindtap="specsTap" class="btn btn-default btn-sm nav spec-item" data-id="52" data-idx="0"
+              data-thumb="https://w.hcbainuo.com/attachment/images/14/2020/11/Tj91aGf1S1a791qX7pJgSbbL7x1XxG.jpg"
+              data-title="20" href="javascript:;">20</a>
+
+            <a bindtap="specsTap" class="btn btn-default btn-sm nav spec-item" data-id="52" data-idx="0"
+              data-thumb="https://w.hcbainuo.com/attachment/images/14/2020/11/Tj91aGf1S1a791qX7pJgSbbL7x1XxG.jpg"
+              data-title="20" href="javascript:;" style="background:#f7f7f7">30</a>
+          </view>
+        </view> -->
+
+
+        <!-- <view class="fui-cell-group nomargin">
+          <view class="fui-cell">
+            <view class="fui-cell-label">数量</view>
+            <view class="fui-cell-info"></view>
+            <view class="fui-cell-mask noremark">
+              <view bindtap="number" class="fui-number" data-id="263" data-max="0" data-min="0" data-value="1">
+                <view class="minus disabled" data-action="minus">-</view>
+                <input bindblur="inputNumber" class="num" name="" type="number" value="{{total}}"></input>
+                <view class="plus disabled" data-action="plus">+
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>  -->
+
+      </view>
+    </view>
+    <view class="fui-navbar fui-iphonex-navbar">
+      <!-- <a bindtap="buyNow" class="nav-item btn confirmbtn" data-hasoption="1" data-id="256">确定</a> -->
+      <view class="nav-item btn confirmbtn"
+      open-type="navigate"
+      bindtap="goUrl"
+      data-url="/pages/goods/order/index?id={{goods_id}}&num={{goods_num}}&goods_pay={{num_pay}}">
+      立即购买
+    </view>
+
+    </view>
+  </view>
+</view>

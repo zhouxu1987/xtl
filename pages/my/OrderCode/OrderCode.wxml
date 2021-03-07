@@ -1,0 +1,98 @@
+<view class="page">
+    <view class="fui-content">
+        <view class="fui-list-group notop" style="background: #f2f5f7;">
+            <view class="fui-list">
+                <view class="fui-list-media">
+                    <image src="{{content.goods[0].g_pic}}"></image>
+                </view>
+                <view class="fui-list-inner">
+                    <view class="title">{{content.goods[0].g_name}}</view>
+                    <view class="subtitle">副标题：SN 5W-30-4L</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="code_box">
+            <view class="p">请将二维码出示给核销员</view>
+            <!-- 二维码开始 -->
+            <!-- <view class='input-wrapper'>
+                <input bindinput='inputHandler' bindconfirm='confirmHandler' placeholder='输入需要转换为二维码的字符串'
+                    value='{{text}}'></input>
+            </view> -->
+            <canvas class='canvas' canvas-id='canvas' bindlongtap='save'></canvas>
+            <view class='tip'>核销码：863 262 863</view>
+            <!-- 二维码结束 -->
+           
+        </view>
+
+        <!-- <block>
+            <block wx:if="{{!canverify}}">
+                <view class="fui-cell-group">
+                    <view class="fui-cell noborder">{{canverify_message}}
+                    </view>
+                </view>
+            </block>
+        </block> -->
+        
+        <view class="fui-cell-group">
+            <view class="fui-cell-title">核销详情</view>
+            <view class="fui-cell noborder">
+                <view class="fui-cell-info">
+                    核销门店：{{content.shop_name}}
+
+                </view>
+                <view class="fui-cell-remark noremark"></view>
+            </view>
+
+            <view class="fui-cell noborder">
+                <view class="fui-cell-info">
+                    核销次数：剩余：1 / 总数: 1
+                </view>
+                <view class="fui-cell-remark noremark"></view>
+            </view>
+            <view class="fui-cell noborder">
+                <view class="fui-cell-info">
+                    有效日期：2022.12.12日前有效
+                </view>
+                <view class="fui-cell-remark noremark"></view>
+            </view>
+        </view>
+        <view class="fui-cell-group">
+            <view class="fui-cell-title">核销记录</view>
+            <block>
+                <block wx:if="{{verifygoodlogs.length==0}}">
+                    <view class="fui-cell noborder">
+                        <view style="margin: 45rpx auto;font-size:26rpx;color:#b2b2b2">
+                            <image src="/static/images/empty.png"
+                                style="width:73rpx;height:73rpx;vertical-align: middle;margin-right:12rpx"></image>
+                            暂时没有记录
+                        </view>
+                    </view>
+                </block>
+                <block wx:else>
+                    <block wx:for="{{verifygoodlogs}}" wx:for-item="itemlog" wx:key="name">
+                        <view class="record">
+                            <view class="fui-cell noborder">
+                                <view class="fui-cell-label">核销员</view>
+                                <view class="fui-cell-info">{{itemlog.salername}}</view>
+                                <view class="fui-cell-remark noremark">{{itemlog.verifydate}}</view>
+                            </view>
+                            <view class="fui-cell noborder">
+                                <view class="fui-cell-label">核销门店</view>
+                                <view class="fui-cell-info">{{itemlog.storename}}</view>
+                            </view>
+                            <view class="fui-cell noborder">
+                                <view class="fui-cell-label">核销次数</view>
+                                <view class="fui-cell-info">{{itemlog.verifynum}}</view>
+                            </view>
+                            <view class="fui-cell noborder">
+                                <view class="fui-cell-label">备注</view>
+                                <view class="fui-cell-info">{{itemlog.remarks}}</view>
+                            </view>
+                        </view>
+                    </block>
+                </block>
+            </block>
+        </view>
+    </view>
+</view>

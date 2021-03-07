@@ -1,0 +1,224 @@
+<view class="{{isIpx?'fui-iphonex-button':''}}"></view>
+
+
+<view class="page navbar padding-b">
+  <view class="fui-list bg">
+    <view class="row" style="font-size:34rpx">
+      <view class="">交易完成</view>
+    </view>
+    <view class="order-price">订单金额(含运费):¥
+      <text>{{content.actual_amount}}</text>
+    </view>
+  </view>
+
+  <!-- 用户信息 -->
+  <view class="fui-list-group">
+    <view class="fui-list noclick">
+      <view class="fui-list-media">
+        <image class="fui-list-icon" src="/static/images/icon/people.png"></image>
+      </view>
+
+      <view class="fui-list-inner">
+        <view class="title">{{content.real_name}}{{content.tel}}</view>
+      </view>
+    </view>
+
+
+    <view class="fui-list">
+      <view class="fui-list-media">
+        <view class="fui-list-icon">
+          <image class="fui-list-icon" src="/static/images/icon/home.png"></image>
+        </view>
+      </view>
+
+<!-- 门店信息 -->
+      <view class="fui-list-inner store-inner">
+        <view class="title">
+          <text class="storename">{{content.shop_name}}</text>
+        </view>
+        <view class="text">
+          <text class="realname">{{content.collect_name}}{{content.phone}}</text>
+        </view>
+        <view class="text">
+          <text class="address">{{content.store_address}}</text>
+        </view>
+      </view>
+
+
+      <view class="fui-list-angle ">
+        <view bindtap="phone" class="icox icox-kefu2" data-phone="18908090843"></view>
+        <navigator hoverClass="none" url="/pages/order/store/map?id=4">
+          <text class="icox icox-dingwei1"></text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+<!-- 商品信息 -->
+  <view class="fui-list-group" style="padding-bottom:20rpx">
+    <view class="fui-list-group-title">
+      <view class="fui-list-icon">
+        <text class="icox icox-dianpu1"></text>
+      </view>
+      <text class="shop">{{content.shop_name}}</text>
+    </view>
+    <navigator class="fui-list goods-item" openType="redirect" url="/pages/goods/detail/index?id=218">
+      <view class="fui-list-media">
+        <image class="goods_img" src="{{content.goods[0].g_pic}}"></image>
+      </view>
+      <view class="fui-list-inner" style="height:140rpx">
+        <view class="text">{{content.goods[0].g_name}}</view>
+        <view class="subtitle">产品名称副标题</view>
+      </view>
+      <view class="price text-right" style="height:140rpx">
+        <view class="text-right">¥
+          <text>{{content.goods.g_price}}</text>
+        </view>
+        <view class="text-right" style="color:#666">x
+          <text>{{content.goods[0].g_num}}</text>
+        </view>
+      </view>
+    </navigator>
+
+    <!-- 订单价格信息 -->
+  </view>
+    <view class="fui-cell-group price-cell-group">
+      <view class="fui-cell">
+        <view class="fui-cell-label">商品小计</view>
+        <view class="fui-cell-info"></view>
+        <view class="fui-cell-remark noremark">¥{{content.money}}</view>
+      </view>
+
+      <view class="fui-cell">
+        <view class="fui-cell-label">运费</view>
+        <view class="fui-cell-info"></view>
+
+        <view class="fui-cell-remark noremark">¥ 0.00</view>
+
+      </view>
+
+      <view class="fui-cell">
+        <view class="fui-cell-label" style="width:auto;">实付费(含运费)</view>
+        <view class="fui-cell-info"></view>
+        <view class="fui-cell-remark noremark">
+          <text class="text-danger">
+            <text style="font-size:30rpx">¥{{content.actual_amount}}</text>
+          </text>
+        </view>
+      </view>
+
+    </view>
+
+<!-- 订单时间信息 -->
+    <view class="fui-cell-group">
+      <view class="order-info">
+        <view class="fui-cell-label" style="font-size:24rpx;color:#999">
+          <text class="fui-cell-label" selectable="true">订单编号：{{content.order_id}}</text>
+        </view>
+        <view class="fui-cell-label" style="font-size:24rpx;color:#999">
+          <text class="fui-cell-label" selectable="true">创建时间：{{content.add_time}}</text>
+        </view>
+        <block>
+          <block wx:if="{{order.paytime}}">
+            <view class="fui-cell-label" style="font-size:24rpx;color:#999">
+              <text class="fui-cell-label" selectable="true">支付时间：2020-12-08 10:34:57</text>
+            </view>
+          </block>
+        </block>
+        <block>
+          <block wx:if="{{order.sendtime}}">
+            <view class="fui-cell-label" style="font-size:24rpx;color:#999">
+              <text class="fui-cell-label" selectable="true">发货时间：</text>
+            </view>
+          </block>
+        </block>
+        <block>
+          <block wx:if="{{order.finishtime}}">
+            <view class="fui-cell-label" style="font-size:24rpx;color:#999">
+              <text class="fui-cell-label" selectable="true">完成时间：2020-12-08 10:35:13</text>
+            </view>
+          </block>
+        </block>
+      </view>
+    </view>
+
+
+
+    <view class="fui-footer aa fui-iphonex-navbar">
+      <block>
+        <block wx:if="{{customer==1}}">
+          <button class="btn btn-default btn-default-o pull-left" openType="contact" sessionFrom="weapp"
+            showMessageCard="true">
+            <text class="icox icox-customerservice"></text>客服
+          </button>
+        </block>
+      </block>
+
+
+      <block>
+        <block wx:if="{{!order.canrestore}}">
+          <!-- 取消订单 -->
+          <block>
+            <block wx:if="{{order.cancancel}}">
+              <view class="btn btn-default btn-default-o btn-sm">
+                <picker bindchange="cancel" range="{{cancel}}" value="{{cancelindex}}">取消订单</picker>
+              </view>
+            </block>
+          </block>
+          <!-- 支付订单 -->
+          <block>
+            <block wx:if="{{order.canpay}}">
+              <navigator class="btn btn-danger-o btn-sm" url="/pages/order/pay/index?id={{order.id}}">支付订单
+              </navigator>
+            </block>
+          </block>
+          <!-- 我要使用|我要取货 -->
+          <block>
+            <block wx:if="{{order.canverify&&!order.isonlyverifygoods}}">
+              <view bindtap="code" class="btn btn-default btn-default-o btn-sm pull-left" data-orderid="{{order.id}}">
+                {{order['dispatchtype']==1?'我要取货':'我要使用'}}</view>
+            </block>
+          </block>
+          <!-- 我要使用 -->
+      
+              <navigator class="btn btn-default btn-default-o btn-sm"
+                url="../OrderCode/OrderCode?order_id={{content.order_id}}">我要使用</navigator>
+
+
+          <!-- 删除订单 -->
+          <block>
+            <block wx:if="{{order.candelete}}">
+              <view bindtap="delete" class="btn btn-default btn-default-o btn-sm" data-type="1">删除订单</view>
+            </block>
+          </block>
+          <!-- 评价 -->
+
+              <navigator class="btn btn-default btn-default-o btn-sm" url="/pages/order/comment/index?id={{order.id}}">
+                评价</navigator>
+
+          <!-- 确认收货 -->
+          <block>
+            <block wx:if="{{order.cancomplete&&order.iscycelbuy==0&&!order.isonlyverifygoods}}">
+              <view bindtap="finish" class="btn btn-default btn-default-o btn-sm">确认收货</view>
+            </block>
+          </block>
+
+          <block>
+            <block wx:if="{{order.canrefund&&order.iscycelbuy==0}}">
+              <navigator class="btn btn-default btn-sm" url="/pages/order/refund/index?id={{order.id}}">
+                {{order.refundtext}}</navigator>
+            </block>
+          </block>
+          <block>
+            <block wx:if="{{order.canrefund&&order.iscycelbuy==1&&order.status==1}}">
+              <navigator class="btn btn-default btn-sm" url="/pages/order/refund/index?id={{order.id}}">
+                {{order.refundtext}}</navigator>
+            </block>
+          </block>
+
+        </block>
+      </block>
+
+    </view>
+
+    </view>

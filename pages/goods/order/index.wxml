@@ -1,0 +1,130 @@
+<!--pages/goods/order/index.wxml-->
+
+<view class="row1">
+  <view class="fui-cell-label">联系人</view>
+  <input id="realname" placeholder="请输入联系人" type="text" value="{{user_name}}" bindinput="user_name_save" class="row1_input"></input>
+</view>
+<view class="row1">
+  <view class="fui-cell-label">联系方式</view>
+  <input id="mobile" placeholder="请输入联系电话" type="text" value="{{user_phone}}" bindinput="user_phone_save" class="row1_input"></input>
+</view>
+
+<!-- 门店模块 -->
+<navigator class="fui-cell-group" hoverClass="none" openType="navigate"
+  url="/pages/goods/store/store?goods_id={{goods_id}}">
+  <view class="row2">
+    <view class="fui-cell-group">
+      <view class="fui-cell-icon" style="margin-right:24rpx">
+        <text class="icox icox-dianpu1"></text>
+      </view>
+      <block>
+        <block wx:if="{{!mydata}}">
+          <text>请选择门店</text>
+        </block>
+      </block>
+      <view class="fui-cell-text textl info">
+        <!--  -->
+        <block>
+        <block wx:if="{{mydata}}">
+        <view class="goods">
+          <view class="goods_item_img">
+            <image class="goods_item_img_toutu" src="{{mydata.shop_img}}"></image>
+          </view>
+          <view class="xq">
+            <view class="goods_item_name">
+              <text>{{mydata.shop_name}}</text>
+            </view>
+            <view class="goods_item_content">
+              <text>{{mydata.address}}</text>
+            </view>
+          </view>
+        </view>
+        </block>
+        </block>
+        <!--  -->
+        <!-- <view class="shop_name">{{mydata.shop_name}}</view>
+        <view class="adress">{{mydata.address}}</view> -->
+      </view>
+      <view class="fui-cell-remark"></view>
+    </view>
+  </view>
+</navigator>
+
+
+<view class="row3">
+  <view>产品详情</view>
+  <!-- 分割线 -->
+  <view class="divLine"></view>
+
+  <view class="goods">
+    <view class="goods_item_img">
+      <image class="goods_item_img_toutu" src="{{goods_img}}"></image>
+    </view>
+
+    <view class="xq">
+      <view class="goods_item_name">
+        <text>{{goods_info.goods_name}}</text>
+      </view>
+      <view class="goods_item_content">
+        <text>￥{{goods_info.price}}元</text>
+      </view>
+    </view>
+
+  </view>
+</view>
+<view class="row">
+  <view>购买数量</view>
+  <view>{{g_num}}个</view>
+</view>
+<view class="row">
+  <view>商品小计</view>
+  <view>{{goods_pay}}元</view>
+</view>
+
+
+<!-- 代金券开始 -->
+<view class="row">
+  <view>代金券</view>
+  <view>
+    <!-- 没有符合条件的代金券时 -->
+    <view wx:if="{{coupon_show==0}}">
+      <text>无可用代金券</text>
+    </view>
+
+    <navigator wx:else class="fui-cell" hoverClass="none" openType="navigate"
+      url="/pages/goods/coupon/coupon?goods_id={{goods_id}}&goods_num={{g_num}}&goods_pay={{pay}}">
+      <view class="fui-cell-icon" style="margin-right:24rpx">
+        <text class="icox icox-dianpu1"></text>
+      </view>
+
+      <block>
+        <block wx:if="{{coupon==''||coupon==0}}">
+          <text>请选择代金券</text>
+        </block>
+      </block>
+
+      <view wx:if="{{coupon!=''||coupon!=0}}" class="fui-cell-text textl info">
+        <view class="shop_name">{{coupon.man}}元,减{{coupon.jian}}元</view>
+      </view>
+      <view class="fui-cell-remark"></view>
+    </navigator>
+
+  </view>
+</view>
+<!-- 代金券结束 -->
+
+<view class="row">
+  <view>运费</view>
+  <view>{{freight}}元</view>
+</view>
+
+<!--底部工具栏开始-->
+<view class="bottom_tool">
+  <view class="tool_item">
+    <view class="pay_text">需付：{{pay}}元</view>
+  </view>
+  <button class="tool_item btn_buy" bindtap="submie_order" open-type="navigate">
+    立即支付
+  </button>
+</view>
+<!--底部工具栏结束-->

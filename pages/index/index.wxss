@@ -1,0 +1,155 @@
+/* pages/index/index.wxss */
+/**轮播图 start**/
+.swiper {
+  height: 300rpx;
+  width: 100%;
+ }
+ .swiper image {
+  height: 100%;
+  width: 100%;
+ }
+ .index_swiper swiper{
+   width:750rpx;
+   /* height:340rpx; */
+ }
+ .index_swiper swiper image{
+   width:100%;
+ }
+  /**轮播图 end**/
+
+  /**导航 start**/
+.inde_cate{
+  display: flex;/*最外层伸缩盒子*/
+  background-color: #fff;
+}
+.inde_cate navigator{
+  flex: 1;/*宽度占1份*/
+  padding: 30rpx;/*内边距30rpx*/
+  text-align: center;
+}
+.inde_cate view{
+  margin-top: 20rpx;
+}
+.inde_cate navigator image{
+  width: 100%;/*父元素多宽，我也是多宽*/
+}
+
+.banner{
+  width:100%;
+  height: 160rpx;
+  /* background: #000; */
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.banner image{
+  width: 720rpx;
+  background-color: #fff;
+  height: 120rpx;
+  border-radius:15rpx;
+}
+
+.goods{
+  width: 100%;/*设置最外层的宽度为100%*/
+  background-color: #F3F3F3;
+  display: flex;/*使用弹性布局*/
+  /* 默认横向，省略没写 */
+  flex-wrap: wrap;/*对超出屏幕范围的子元素进行换行*/
+  justify-content: space-between;
+  padding: 0rpx 15rpx;
+}
+.goods_item{
+  width: 350rpx;
+  height: 450rpx;
+  background: #fff; 
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  border-radius:15rpx; 
+}
+
+.goods_item_img{
+  width: 100%;
+  /* border-radius:25rpx; */
+}
+.goods_item_img_toutu{
+  width: 350rpx;
+  height: 300rpx;
+  border-radius:15rpx 15rpx 0 0;
+}
+.goods_item_content{
+  display: flex;
+  padding: 10rpx;
+  justify-content:space-between;
+}
+.goods_item_name{
+  padding: 10rpx;
+  font-size:30rpx;
+  flex:2;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.goods_item_content text{
+  color: red;
+}
+.goods_item_content navigator{
+  border:1rpx red solid;
+  color: red;
+  font-size: 22rpx;
+  padding: 8rpx;
+}
+.index_footimg{
+  width:750rpx;
+  height:160rpx;
+  padding: 20rpx 0;
+}
+.index_banner_img{
+  height: auto !important;
+}
+
+.index_class{
+  margin: 20rpx 15rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+.index_class2{
+  margin: 50rpx 15rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+.index_class_l{
+  width: 35.5%;
+}
+.index_class_l image{
+  width: 100%;
+}
+.index_class_r{
+  display: flex;
+  align-items: top;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 69%;
+  flex-grow: 1;
+
+}
+.index_class_r1{
+  width: 34%;
+  flex-grow: 1;
+  margin-left: 10rpx;
+  height: 50%;
+  
+}
+.index_class_r1:nth-child(1)
+{
+  margin-bottom: 4rpx;
+}
+.index_class_r1:nth-child(2)
+{
+  margin-bottom: 4rpx;
+}

@@ -1,0 +1,37 @@
+<!--pages/main/youhui/youhui.wxml-->
+<wxs module="filters" src="../../../utils/addmul.wxs"></wxs>
+<view class="service_top">
+  <view wx:for="{{shaixuan}}" class="service_top_one2" wx:for-index="index" 
+  data-id="{{index}}" 
+  wx:key="index"
+  bindtap="swichCate">
+    <text class="{{item.classname}}">{{item.name}}</text>
+  </view>
+</view>
+
+<view class="youhui_one"  wx:for="{{coupon_list}}" wx:key="id">
+  <image src="../../../static/images/manjianhuangse_bg.png" class="youhui_one_img"></image>
+  <view class="youhui_one_price"><text>￥</text>{{filters.toFix(item.jian)}}</view>
+  <view class="youhui_one_name">
+    <text class="youhui_one_name_top">满{{filters.toFix(item.man)}}元，减{{filters.toFix(item.jian)}}元</text>
+    <text class="youhui_one_name_mid">该券已被领取{{item.use_num}}张</text>
+      <text class="youhui_one_name_mid">剩余{{item.num-item.use_num}}张</text>
+    <text class="youhui_one_name_mid">有效期至2021.12.12{{item.end_time.text}}</text>
+  </view>
+  <view class="youhui_one_shiong" 
+    wx:if="{{data_type == 'not_use'}}" 
+    data-id="{{item.id}}" 
+    data-price="{{item.reduce_price}}" 
+    bindtap="getcoupon">
+    立即领取
+  </view>
+  <view class="youhui_one_shiong" wx:if="{{data_type == 'is_use'}}" style="opacity: 0.5;">已领取</view>
+  <view class="youhui_one_shiong" wx:if="{{data_type == 'is_expire'}}" style="opacity: 0.5;">已过期</view>
+</view>
+<!-- 无商品 -->
+<view wx:if="{{ !coupon_list.length }}">
+  <view class="yoshop-notcont">
+    <image src="../../../static/images/no_content.png"></image>
+    <text class="cont">亲，暂时没有优惠券可以领取哦</text>
+  </view>
+</view>

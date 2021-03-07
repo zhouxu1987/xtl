@@ -1,0 +1,17 @@
+<view class="all">
+  <view class="content">
+    <view class="title">选择车型</view>
+    <view class="model_list">
+
+    <view 
+      class="model_list_content" 
+      bindtap="toDisplacement"
+      wx:for="{{car_cm_models}}"
+      wx:key="cm_models"
+      data-params="{{params + item}}"
+    >
+      {{item}}
+    </view>
+    </view>
+  </view>
+</view>

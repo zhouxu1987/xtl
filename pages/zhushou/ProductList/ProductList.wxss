@@ -1,0 +1,51 @@
+/* pages/zhushou/ProductList/ProductList.wxss */swiper{
+  width: 100%;
+  height: 40vh;
+}
+swiper-item image{
+  width: 100%;
+  height: 100%;
+}
+.name{
+  padding: 20rpx 24rpx;
+  box-sizing: border-box;
+  background-color: #FFA500;
+  color: #ffffff;
+  text-shadow: #000000 0 0 8rpx;
+  font-weight: bolder;
+  font-size: 40rpx;
+}
+.parameter{
+  margin: 20rpx 15rpx;
+  box-shadow:5rpx 4rpx 10rpx #666;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.parameter_content{
+  display: flex;
+  align-items: bottom;
+  justify-content: left;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.parameter_title{
+  background-color: #FFC800;
+  color: #ffffff;
+  padding: 15rpx 20rpx;
+  box-sizing: border-box;
+  font-weight: bolder;
+  text-shadow: #000000 0 0 8rpx;
+}
+.parameter_content1{
+  width: 49.5%;
+  border:0 0 2rpx 2rpx solid #999999;
+  border-bottom: 2rpx solid #999999;
+  border-left: 2rpx solid #999999;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  min-height: 68rpx;
+  line-height: 68rpx;
+}
+.parameter_content1:nth-child(odd){
+  border-left:0;
+}

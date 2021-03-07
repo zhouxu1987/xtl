@@ -1,0 +1,79 @@
+/* pages/my/welfare/index.wxss *//* pages/main/youhui/youhui.wxss */
+page {
+  background-color: #f5f5f5;
+}
+.yoshop-notcont{
+  text-align: center;
+}
+.service_top_one2 {
+  width: 33.33%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service_top_one2 text {
+  display: block;
+  padding: 10rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+}
+.service_top_one_moren2 {
+  color: #888888;
+}
+.youhui_one {
+  width: calc(100% - 60rpx);
+  height: 170rpx;
+  background-color: #ffffff;
+  border-radius: 8rpx;
+  margin:20rpx auto 0 auto;
+  display: flex;
+  align-items: center;
+}
+.youhui_one_shiong {
+  width: 120rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+  background-color: #FEB400;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 50rpx;
+}
+.youhui_one_name {
+  width: calc(100% - 400rpx);
+  display: table;
+  margin-right: 20rpx;
+}
+.youhui_one_name_top {
+  font-size: 28rpx;
+  color: #222222;
+  display: block;
+  margin-bottom: 10rpx;
+}
+.youhui_one_name_mid {
+  font-size: 24rpx;
+  color: #666666;
+  display: block;
+}
+.youhui_one_price {
+  width: 160rpx;
+  height: 170rpx;
+  font-size: 56rpx;
+  line-height: 170rpx;
+  color: #FEB400;
+  display: flex;
+  justify-content: center;
+}
+.youhui_one_price text{
+  font-size: 32rpx;
+  line-height: 170rpx;
+  color: #FEB400;
+  margin-left: -16rpx;
+}
+.youhui_one_img {
+  width: 80rpx;
+  height: 170rpx;
+  display: block;
+}

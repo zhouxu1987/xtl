@@ -1,0 +1,92 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/demo/demo",
+    
+    "pages/login/login",
+    "pages/baoyang/index",
+    "pages/rhy/rhy",
+    "pages/xiche/index",
+    "pages/chezheng/index",
+    "pages/jiayou/index",
+    "pages/mendian/index",
+    "pages/zhushou/index",
+    "pages/my/index",
+    "pages/my/OrderList/index",
+    "pages/my/OrderDetail/OrderDetail",
+    "pages/my/OrderCode/OrderCode",
+    "pages/my/VIP/index",
+    "pages/my/distribution/index",
+    "pages/my/welfare/index",
+    "pages/my/address/index",
+    "pages/my/Promotion/index",
+    "pages/my/about/index",
+    "pages/cs/index",
+    "pages/cs2/index",
+    "pages/mendian/shop/index",
+    "pages/goods/detail/index",
+    "pages/goods/order/index",
+    "pages/goods/store/store",
+    "pages/goods/coupon/coupon",
+    "pages/zhushou/classification/classification",
+    "pages/zhushou/ModelList/ModelList",
+    "pages/zhushou/SelectModel/SelectModel",
+    "pages/zhushou/SelectDisplacement/SelectDisplacement",
+    "pages/zhushou/ProductList/ProductList",
+    "pages/my/address/add",
+    "pages/pay/pay",
+    "pages/cs/md",
+    "pages/map/map",
+    "pages/my/MyCoupon/MyCoupon",
+    "pages/my/My01/My01"
+
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFC800",
+    "navigationBarTitleText": "小螳螂车服",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#fafafa"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "color": "#999999",
+    "selectedColor": "#ff5555",
+    "borderStyle": "white",
+    "backgroundColor": "#f7f7fa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/tabBar/icon-1.png",
+        "selectedIconPath": "static/images/tabBar/icon-1-active.png"
+      },
+      {
+        "pagePath": "pages/mendian/index",
+        "text": "门店",
+        "iconPath": "static/images/tabBar/icon-3.png",
+        "selectedIconPath": "static/images/tabBar/icon-3-active.png"
+      },
+      {
+        "pagePath": "pages/zhushou/index",
+        "text": "换油助手",
+        "iconPath": "static/images/tabBar/icon-10.png",
+        "selectedIconPath": "static/images/tabBar/icon-10-active.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "会员中心",
+        "iconPath": "static/images/tabBar/icon-5.png",
+        "selectedIconPath": "static/images/tabBar/icon-5-active.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于显示您附近的门店"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

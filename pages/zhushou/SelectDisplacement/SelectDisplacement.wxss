@@ -1,0 +1,23 @@
+/* pages/SelectDisplacement/SelectDisplacement.wxss */.content{
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 2vh;
+}
+.title{
+  width: 100%;
+  color: #ffffff;
+  background-color:#FFC800;
+  height: 7vh;
+  text-align: center;
+  line-height: 7vh;
+  font-size: 40rpx;
+}
+.model_list_content{
+  width: 100%;
+  background-color: #ffffff;
+  height: 8vh;
+  text-align: center;
+  line-height: 8vh;
+  font-size: 35rpx;
+  border-bottom: 2rpx solid #dcdcdc;
+}

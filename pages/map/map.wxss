@@ -1,0 +1,43 @@
+/* pages/map/map.wxss */
+.map_padding{
+  padding: 0rpx 15rpx 20rpx 15rpx;
+}
+.map_title{
+  background-color:#FFC800 ;
+  color: #ffffff;
+  padding: 15rpx 20rpx;
+  box-sizing: border-box;
+  font-weight: bolder;
+  text-shadow:  #000000 0 0 8rpx; /*字体描边*/
+}
+.map_content{
+  padding: 15rpx 20rpx;
+  font-weight: bolder;
+  border: 1px solid #FFC800;
+  background-color: #ffffff;
+  min-height: 58rpx;
+  display: flex;
+  flex-direction: row;
+}
+.map_content1{
+  width: 50%;
+}
+.map_map{
+  margin: 40rpx 20rpx 0 20rpx;
+  border: 1px solid #FFA500;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.daohang_btn{
+  margin-top: 40rpx;
+}
+.daohang_btn button{
+  border-radius: 20rpx;
+  box-shadow:5rpx 4rpx 10rpx #666;
+}
+.map_text{
+  box-shadow:5rpx 4rpx 10rpx #666;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin-top: 40rpx;
+}

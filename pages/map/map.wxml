@@ -1,0 +1,40 @@
+<!--pages/map/map.wxml-->
+
+
+<view class="map_map">
+  <map id="map"
+    longitude="{{longitude}}"
+    latitude="{{latitude}}"
+    scale="{{scale}}"
+    markers="{{markers}}"
+    bindmarkertap="markertap"
+    bindregionchange="regionchange"
+    show-location
+    style="width: 100%; height: 300px;"
+  >
+  </map>
+</view>
+
+<view class="map_padding">
+
+  <view class="map_text">
+    <view class="map_title">门店的位置：</view>
+    <view class="map_content">
+      <view class="map_content1">经度：{{shop_longitude}}222222222</view>
+      <view class="map_content1">纬度：{{shop_latitude}}222222222</view>
+    </view>
+  </view>
+
+    <view class="map_text">
+    <view class="map_title">您当前的位置：</view>
+    <view class="map_content">
+      <view class="map_content1">经度：{{user_longitude}}33333333</view>
+      <view class="map_content1">纬度：{{user_latitude}}33333333</view>
+    </view>
+  </view>
+
+</view>
+
+<view class="daohang_btn">
+<button type="primary" bindtap="navigate">导航</button>
+</view>

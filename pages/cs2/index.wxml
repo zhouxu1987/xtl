@@ -1,0 +1,14 @@
+
+<button 
+  type="primary" 
+  open-type="getUserInfo" 
+  bindtap="getUser">
+  登录及获取用户信息
+</button>
+
+<button 
+  class="check"
+  type="primary" 
+  bindtap="checklogin">
+  检查登录
+</button>

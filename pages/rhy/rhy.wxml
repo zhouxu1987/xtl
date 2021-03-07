@@ -1,0 +1,29 @@
+<!--pages/baoyang/index.wxml-->
+<!--商品列表开始-->
+<view class="goods">
+
+<!--横幅开始-->
+<view class="banner">
+  <image src="/static/images/index/02.jpg"></image>
+</view>
+<!--横幅结束-->
+<view class="goods_item" wx:for="{{good_list_1}}" wx:key="id">
+  <navigator open-type="navigate"  url="{{'/pages/goods/detail/index?id='+item.id}}">
+    <view class="goods_item_img">
+      <image class="goods_item_img_toutu" src="{{'http://admin.hcbainuo.com/uploads/'+item.goods_pic}}"></image>
+    </view>
+    <view class="goods_item_name">
+      <text>{{item.goods_name}}</text>
+    </view>
+    <view class="goods_item_content">
+      <text>￥{{item.price}}</text>
+      <navigator open-type="navigate"  url="{{'/pages/goods/detail/index?id='+item.id}}">详情</navigator>
+    </view>
+  </navigator>
+</view>
+
+</view>
+
+<view class="goods_footimg" style="position:fixed; bottom:0;width: 750rpx;">
+  <image src="/static/images/botton.jpg" style="width:750rpx;height:160rpx"></image>
+</view>

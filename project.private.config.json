@@ -1,0 +1,89 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "门店频道",
+          "pathName": "pages/mendian/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/cs/index",
+          "pathName": "pages/cs/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/index",
+          "pathName": "pages/my/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goods/detail/index",
+          "pathName": "pages/goods/detail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mendian/shop/index",
+          "pathName": "pages/mendian/shop/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/cs2/index",
+          "pathName": "pages/cs2/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "p_id=2",
+          "scene": 1047
+        },
+        {
+          "name": "pages/mendian/index",
+          "pathName": "pages/cd/md",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goods/detail/index",
+          "pathName": "pages/goods/detail/index",
+          "query": "id=38",
+          "scene": null
+        },
+        {
+          "name": "pages/my/Promotion/index",
+          "pathName": "pages/my/Promotion/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/OrderDetail/OrderDetail",
+          "pathName": "pages/my/OrderDetail/OrderDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/OrderCode/OrderCode",
+          "pathName": "pages/my/OrderCode/OrderCode",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

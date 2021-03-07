@@ -1,0 +1,71 @@
+<view class="index_swiper">
+  
+  <swiper autoplay indicatorDots circular indicator-active-color='#FFC800'>
+    <swiper-item 
+    wx:for="{{SwiperList}}" 
+    wx:key="goods_id"
+    >
+      <navigator>
+        <image mode="widthFix" src="{{item}}" ></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 轮播图结束 -->
+<view class="shop_xiangmu">
+  <view class="shop_name">{{shop_name}}</view>
+  <view class="shop_zhichi">
+    <view class="xiangmu_title">
+      店面支持项目
+    </view>
+    <view class="xiangmu_content">  
+      <view>小保养</view>
+      <view>大保养</view>
+      <view>洗车</view>
+      <view>钣金</view>
+      <view>喷漆</view>
+      <view>底盘维修</view>
+    </view>
+  </view>
+</view>
+
+<view class="content">
+  店面详情展示1
+  <image src="{{environment_pic_one}}"></image>
+  店面详情展示2
+  <image src="{{environment_pic_two}}"></image>
+</view>
+
+<!--底部工具栏开始-->
+<view class="bottom_tool">
+
+<navigator class="tool_item" url="/pages/index/index" open-type="switchTab">
+<!--
+    因为要跳转到tabBar页面所以要加
+    open-type="switchTab"属性
+-->
+  <view class="iconfont iconshouye"></view>
+  <view>首页</view>
+</navigator>
+
+
+
+<view class="tool_item">
+  <view class="iconfont iconkefu"></view>
+  <view>联系客服</view>
+  <button open-type="contact"></button>
+</view>
+
+  <view class="tool_item btn_phone" catchtap='freeTell' >
+    <view>联系门店</view>
+  </view>
+
+  <view
+      class="tool_item btn_buy" url="haodang"
+      bindtap="toMap" 
+      data-shop_coordinate="{{shop_coordinate}}"
+      >
+      一键导航到店
+  </view>
+</view>
+<!--底部工具栏结束-->

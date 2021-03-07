@@ -1,0 +1,134 @@
+{
+  "description": "项目配置文件",
+  "#packOptions": "打包配置选项",
+  "packOptions": {
+    "#ignore1": "配置打包时对符合指定规则的文件或文件夹进行忽略",
+    "#ignore2": "跳过打包的过程，这些文件或文件夹不会出现在预览或上传的结果内",
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "#compileType": "编译类型,miniprogram当前为普通小程序项目。plugin当前为小程序插件项目",
+  "compileType": "miniprogram",
+  "#libVersion": "版本基础库",
+  "libVersion": "2.14.0",
+  "#appid": "项目的AppID，只在新建项目时读取",
+  "appid": "wx5b0138434dae1abd",
+  "#projectname": "项目名称",
+  "projectname": "xtl_wxapp_new",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "门店频道",
+          "pathName": "pages/mendian/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/cs/index",
+          "pathName": "pages/cs/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/index",
+          "pathName": "pages/my/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goods/detail/index",
+          "pathName": "pages/goods/detail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mendian/shop/index",
+          "pathName": "pages/mendian/shop/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/cs2/index",
+          "pathName": "pages/cs2/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "p_id=2",
+          "scene": 1047
+        },
+        {
+          "name": "pages/mendian/index",
+          "pathName": "pages/cd/md",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goods/detail/index",
+          "pathName": "pages/goods/detail/index",
+          "query": "id=38",
+          "scene": null
+        },
+        {
+          "name": "pages/my/Promotion/index",
+          "pathName": "pages/my/Promotion/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

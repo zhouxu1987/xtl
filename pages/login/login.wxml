@@ -1,0 +1,5 @@
+<!--pages/login/login.wxml-->
+<image src="../../static/images/logo/Logo.jpg" class="login_logo"></image>
+<button class="login_button" openType="getUserInfo" lang="zh_CN" bindgetuserinfo="authorLogin">授权登录</button>
+<button class="login_button" bindtap="goIndex">暂不登录</button>
+<!-- <view class="no_sq" bindtap="goIndex">暂不登录</view> -->

@@ -1,0 +1,132 @@
+<!--pages/main/team/team.wxml-->
+<!-- 11 -->
+        <view class="page commission">
+            <view class="user-info">
+                <view class="fui-list">
+                    <view class="fui-list-media">
+                      <open-data  class="" type="userAvatarUrl"></open-data>
+                        <!-- <image src="{{member['avatar']}}"></image> -->
+                    </view>
+                    <view class="fui-list-inner">
+                        <view class="title">{{AllData.real_name}}</view>
+                        <view class="text">邀请人：{{AllData.references}}</view>
+                        <view class="subtitle">默认等级</view>
+                    </view>
+                </view>
+            </view>
+                    <view class="fui-cell-group">
+                        <view class="fui-cell">
+                            <view class="fui-cell-icon">
+                                <text class="icox icox-yaoqingma" style="color: #feb312;"></text>
+                            </view>
+                            <view class="fui-cell-text">我的推广码：{{AllData.Invitation_code}}</view>
+                        </view>
+                    </view>
+
+
+            <view class="userblock">
+                <view class="line total">
+                    <view class="num">{{AllData.all_integral}}</view>
+                    <view class="title">总获得的积分</view>
+                </view>
+                <view class="line able">
+                    <view class="text">
+                        <view class="num">{{AllData.my_integral}}</view>
+                        <view class="title">可使用积分</view>
+                    </view>
+                    <navigator class="btn btn-warning pull-right {{member['commission_ok']==0?' disabled':''}}" hoverClass="none" openType="navigate" url="{{member['commission_ok']==0?'':'/pages/commission/withdraw/index'}}">兑换积分</navigator>
+                </view>
+            </view>
+            <view class="fui-block-group">
+                <navigator class="fui-block-child" url="/pages/commission/withdraw/index">
+                    <view class="icon" style="color: #ff4357;">
+                        <i class="icox icox-qian"></i>
+                    </view>
+                    <view class="text">
+                        <view class="title">分销所得积分</view>
+                        <text>{{AllData.all_integral}}</text>
+            </view>
+                </navigator>
+                <navigator class="fui-block-child" url="/pages/commission/order/index">
+                    <view class="icon" style="color: #9ec9f4;">
+                        <i class="icox icox-dingdan2"></i>
+                    </view>
+                    <view class="text">
+                        <view class="title">分销订单</view>
+                        <text>{{AllData.order_num}}</text>笔
+            </view>
+                </navigator>
+                <navigator class="fui-block-child" url="/pages/commission/log/index">
+                    <view class="icon" style="color: #ffbe2e;">
+                        <i class="icox icox-tixian1"></i>
+                    </view>
+                    <view class="text">
+                        <view class="title">兑换明细</view>
+                        <text>0</text>笔
+            </view>
+                </navigator>
+                <navigator class="fui-block-child" url="/pages/commission/down/index">
+                    <view class="icon" style="color: #ff6e02;">
+                        <i class="icox icox-heilongjiangtubiao11"></i>
+                    </view>
+                    <view class="text">
+                        <view class="title">我的团队</view>
+                        <text>{{AllData.all_count}}</text>人
+            </view>
+                </navigator>
+            </view>
+
+            
+          
+                    <navigator class="fui-cell-group" url="../distribution/index">
+                        <view class="fui-cell">
+                            <view class="fui-cell-icon">
+                                <text class="icox {{set.postercount>0?'icox-zhuyi':'icox-erweima1'}}" style="color: #feb312;"></text>
+                            </view>
+                            <view class="fui-cell-text">{{set.postercount>0?'邀请您的好友':'推广二维码'}}</view>
+                            <view class="fui-cell-remark" style="font-size: 20rpx;"></view>
+                        </view>
+                    </navigator>
+
+        </view>
+        <!-- 222222222222222 -->
+        <view class="team">
+  <view class="team_top">
+    <view class="team_top_left">
+      <!-- <image src="{{user.avatarUrl}}"></image> -->
+      <open-data  class="" type="userAvatarUrl"></open-data>
+    </view>
+    <view class="team_top_right">
+      <text>{{user.nickName}}</text>
+      <text>团队人数：{{user.down_user.length}}人</text>
+    </view>
+    <view style="width:10%;height:30px;float:left;">
+      <!-- <button bindtap="yaoqing" style="background-image:url(/image/yaoqingcode.png);width:100%;height:100%;background-size: cover;background-color:rgba(255,255,255,0);border:none;margin-top:10px;"></button> -->
+      <image  bindtap="yaoqing" src="/image/yaoqingcode.png" style="width:100%;height:100%;margin-top:10px;"></image>
+    </view>
+    
+  </view>
+  <view class="team_bot">
+    <view class="team_bot_one" wx:for="{{user.down_user}}">
+      <view class="team_bot_one_left">
+        <view class="team_bot_one_img">
+          <image src="{{item.avatarUrl}}"></image>
+        </view>
+        <text class="team_bot_one_img_text">{{item.nickName}}</text>
+      </view>
+      <text class="team_bot_one_dtaa">{{item.create_time}}</text>
+    </view>
+  </view>
+</view>
+<view>昵称：{{AllData.real_name}}</view>
+<view>邀请人ID：{{AllData.references}}</view>
+<view>我的邀请码：{{AllData.Invitation_code}}</view>
+<view>总获得的积分：{{AllData.all_integral}}</view>
+<view>现有可用积分：{{AllData.my_integral}}</view>
+<view>推广总人数：{{AllData.all_count}}</view>
+<view>总分销订单量{{AllData.order_num}}</view>
+<view>一级分销列表：{{AllData.one_all}}</view>
+<view>一级分销人数：{{AllData.one_count}}</view>
+<view>二级分销列表：{{AllData.two_all}}</view>
+<view>二级分销人数：{{AllData.two_count}}</view>
+

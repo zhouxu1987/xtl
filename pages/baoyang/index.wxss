@@ -1,0 +1,107 @@
+/* pages/index/index.wxss */
+/**轮播图 start**/
+.swiper {
+  height: 300rpx;
+  width: 100%;
+ }
+ .swiper image {
+  height: 100%;
+  width: 100%;
+ }
+ .index_swiper swiper{
+   width:750rpx;
+   height:340rpx;
+ }
+ .index_swiper swiper image{
+   width:100%;
+ }
+  /**轮播图 end**/
+
+  /**导航 start**/
+.inde_cate{
+  display: flex;/*最外层伸缩盒子*/
+  background-color: #fff;
+}
+.inde_cate navigator{
+  flex: 1;/*宽度占1份*/
+  padding: 30rpx;/*内边距30rpx*/
+  text-align: center;
+}
+.inde_cate view{
+  margin-top: 20rpx;
+}
+.inde_cate navigator image{
+  width: 100%;/*父元素多宽，我也是多宽*/
+}
+
+.banner{
+  width:100%;
+  height: 80rpx;
+  /* background: #000; */
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.banner image{
+  width: 720rpx;
+  background-color: #fff;
+  height: 80rpx;
+  border-radius:15rpx;
+}
+
+.goods{
+  width: 100%;/*设置最外层的宽度为100%*/
+  background-color: #F3F3F3;
+  display: flex;/*使用弹性布局*/
+  /* 默认横向，省略没写 */
+  flex-wrap: wrap;/*对超出屏幕范围的子元素进行换行*/
+  justify-content: space-between;
+  padding: 0rpx 15rpx;
+}
+.goods_item{
+  width: 350rpx;
+  height: 450rpx;
+  background: #fff; 
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  border-radius:15rpx; 
+}
+
+.goods_item_img{
+  width: 100%;
+  /* border-radius:25rpx; */
+}
+.goods_item_img_toutu{
+  width: 350rpx;
+  height: 300rpx;
+  border-radius:15rpx 15rpx 0 0;
+}
+.goods_item_content{
+  display: flex;
+  padding: 10rpx;
+  justify-content:space-between;
+}
+.goods_item_name{
+  padding: 10rpx;
+  font-size:30rpx;
+  flex:2;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.goods_item_content text{
+  color: red;
+}
+.goods_item_content navigator{
+  border:1rpx red solid;
+  color: red;
+  font-size: 22rpx;
+  padding: 8rpx;
+}
+.goods_footimg{
+  margin-top:20rpx;
+}
